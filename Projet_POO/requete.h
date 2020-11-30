@@ -6,7 +6,7 @@ using namespace MySql::Data::MySqlClient;
 ref class requete
 {
 private :
-	String^ cnx = "Server=localhost\\phpmyadmin;Uid=root;Pwd=;database=projet_poo";
+	String^ cnx = "server=127.0.0.1;user id=root;persistsecurityinfo=True;database=projet_poo;port=3308";
 	
 public :
 	String^ recuperer(String^);

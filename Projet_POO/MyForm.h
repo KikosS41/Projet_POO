@@ -656,7 +656,7 @@ private: System::Void afficher_Click(System::Object^ sender, System::EventArgs^ 
 		requete req;
 
 		/* requete 1 : */
-		textBox1->Text = req.recuperer("SELECT AVG(prix_ttc) FROM commande");
+		textBox1->Text = req.recuperer("SELECT AVG(PRIX_TTC_COMMANDE) FROM commande");
 
 		/* requete 2 : */
 		textBox2->Text = req.recuperer("SELECT SUM(prix_ttc) FROM commande INNER JOIN date WHERE commande.dateemission = date.ID_DATE and MONTH(date.date) = " + textBox2->Text);
@@ -665,6 +665,7 @@ private: System::Void afficher_Click(System::Object^ sender, System::EventArgs^ 
 		textBox3->Text = req.recuperer("SELECT Nom_article from article WHERE stock_article < seuil_reapro");
 		
 		/* requete 4 : */
+		
 		textBox4->Text = req.recuperer("SELECT SUM(prix_ttc) FROM commande INNER JOIN client WHERE commande.id_client = client.id_client And Client.nom = " + textBox4->Text + " Client.prenom = " + textBox5->Text);
 		
 		/* requete 5 : */
