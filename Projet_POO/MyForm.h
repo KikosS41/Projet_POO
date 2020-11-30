@@ -1,5 +1,7 @@
 #pragma once
 
+#include "requete.h"
+
 namespace ProjetPOO {
 
 	using namespace System;
@@ -8,6 +10,7 @@ namespace ProjetPOO {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace MySql::Data::MySqlClient;
 
 	/// <summary>
 	/// Description résumée de MyForm
@@ -65,7 +68,6 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::TextBox^ textBox10;
-
 
 	private:
 		/// <summary>
@@ -152,6 +154,7 @@ namespace ProjetPOO {
 			this->afficher->Text = L"Afficher";
 			this->afficher->UseVisualStyleBackColor = true;
 			this->afficher->Visible = false;
+			this->afficher->Click += gcnew System::EventHandler(this, &MyForm::afficher_Click);
 			// 
 			// personnel
 			// 
@@ -378,11 +381,11 @@ namespace ProjetPOO {
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(630, 9);
+			this->dataGridView1->Location = System::Drawing::Point(630, 166);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(449, 433);
+			this->dataGridView1->Size = System::Drawing::Size(449, 276);
 			this->dataGridView1->TabIndex = 27;
 			this->dataGridView1->Visible = false;
 			// 
@@ -618,7 +621,7 @@ private: System::Void statistique_CheckedChanged(System::Object^ sender, System:
 	label7->Visible = true;
 	label8->Visible = true;
 	label9->Visible = true;
-	label10->Visible = false;
+	label10->Visible = true;
 
 	textBox1->Visible = true;
 	textBox2->Visible = true;
@@ -629,20 +632,47 @@ private: System::Void statistique_CheckedChanged(System::Object^ sender, System:
 	textBox7->Visible = true;
 	textBox8->Visible = true;
 	textBox9->Visible = true;
-	textBox10->Visible = false;
+	textBox10->Visible = true;
 
 	dataGridView1->Visible = true;
 
 	label1->Text = "Panier moyen (après remise) :";
 	label2->Text = "Chiffre d'affaire sur un mois choisi :";
 	label3->Text = "Produits sous le seuil de réapprovisionnement :";
-	label4->Text = "montant total des achats pour un client :";
-	label5->Text = "Les 10 articles les plus vendus :";
-	label6->Text = "Les 10 articles les moins vendus :";
-	label7->Text = "Valeur commerciale du stock :";
-	label8->Text = "Valeur d’achat du stock :";
-	label9->Text = "Variations de valeurs commerciales :";
+	label4->Text = "Nom client :";
+	label5->Text = "Prenom client :";
+	label6->Text = "Les 10 articles les plus vendus :";
+	label7->Text = "Les 10 articles les moins vendus :";
+	label8->Text = "Valeur commerciale du stock :";
+	label9->Text = "Valeur d’achat du stock :";
+	label10->Text = "Variations de valeurs commerciales :";
 
+}
+
+
+private: System::Void afficher_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (statistique->Checked)
+	{
+		requete req;
+
+		/* requete 1 : */
+		textBox1->Text = req.recuperer("SELECT AVG(prix_ttc) FROM commande");
+
+		/* requete 2 : */
+		textBox2->Text = req.recuperer("SELECT SUM(prix_ttc) FROM commande INNER JOIN date WHERE commande.dateemission = date.ID_DATE and MONTH(date.date) = " + textBox2->Text);
+		
+		/* requete 3 : */
+		textBox3->Text = req.recuperer("SELECT Nom_article from article WHERE stock_article < seuil_reapro");
+		
+		/* requete 4 : */
+		textBox4->Text = req.recuperer("SELECT SUM(prix_ttc) FROM commande INNER JOIN client WHERE commande.id_client = client.id_client And Client.nom = " + textBox4->Text + " Client.prenom = " + textBox5->Text);
+		
+		/* requete 5 : */
+		textBox6->Text = req.recuperer("SELECT TOP 10 Nom_Article FROM Articles INNER JOIN Contient ON Articles.ID_Articles = Contient.ID_Articles ORDER BY Quantité_COMMANDEE DESC ;");
+		
+		/* requete 6 : */
+		textBox7->Text = req.recuperer("SELECT SUM(prix_ttc) FROM commande INNER JOIN client WHERE commande.id_client = client.id_client And Client.nom = " + textBox4->Text + " Client.prenom = " + textBox5->Text);
+	}
 }
 };
 }
