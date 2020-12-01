@@ -68,6 +68,8 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::TextBox^ textBox10;
+	private: System::Windows::Forms::TextBox^ communication;
+
 
 	private:
 		/// <summary>
@@ -112,6 +114,7 @@ namespace ProjetPOO {
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
+			this->communication = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -124,6 +127,7 @@ namespace ProjetPOO {
 			this->creer->Text = L"Créer";
 			this->creer->UseVisualStyleBackColor = true;
 			this->creer->Visible = false;
+			this->creer->Click += gcnew System::EventHandler(this, &MyForm::creer_Click);
 			// 
 			// modifier
 			// 
@@ -407,11 +411,22 @@ namespace ProjetPOO {
 			this->textBox10->TabIndex = 29;
 			this->textBox10->Visible = false;
 			// 
+			// communication
+			// 
+			this->communication->Location = System::Drawing::Point(650, 13);
+			this->communication->Multiline = true;
+			this->communication->Name = L"communication";
+			this->communication->ReadOnly = true;
+			this->communication->Size = System::Drawing::Size(278, 130);
+			this->communication->TabIndex = 30;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScroll = true;
 			this->ClientSize = System::Drawing::Size(1091, 456);
+			this->Controls->Add(this->communication);
 			this->Controls->Add(this->textBox10);
 			this->Controls->Add(this->label10);
 			this->Controls->Add(this->dataGridView1);
@@ -462,10 +477,10 @@ private: System::Void personnel_CheckedChanged(System::Object^ sender, System::E
 	label2->Visible = true;
 	label3->Visible = true;
 	label4->Visible = true;
-	label5->Visible = false;
-	label6->Visible = false;
-	label7->Visible = false;
-	label8->Visible = false;
+	label5->Visible = true;
+	label6->Visible = true;
+	label7->Visible = true;
+	label8->Visible = true;
 	label9->Visible = false;
 	label10->Visible = false;
 
@@ -473,10 +488,10 @@ private: System::Void personnel_CheckedChanged(System::Object^ sender, System::E
 	textBox2->Visible = true;
 	textBox3->Visible = true;
 	textBox4->Visible = true;
-	textBox5->Visible = false;
-	textBox6->Visible = false;
-	textBox7->Visible = false;
-	textBox8->Visible = false;
+	textBox5->Visible = true;
+	textBox6->Visible = true;
+	textBox7->Visible = true;
+	textBox8->Visible = true;
 	textBox9->Visible = false;
 	textBox10->Visible = false;
 
@@ -486,7 +501,10 @@ private: System::Void personnel_CheckedChanged(System::Object^ sender, System::E
 	label2->Text = "Prénom :";
 	label3->Text = "Supérieur :";
 	label4->Text = "Date d'embauche :";
-
+	label5->Text = "Adresse :";
+	label6->Text = "code postal :";
+	label7->Text = "Ville :";
+	label8->Text = "Pays :";
 }
 
 private: System::Void client_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -499,8 +517,8 @@ private: System::Void client_CheckedChanged(System::Object^ sender, System::Even
 	label1->Visible = true;
 	label2->Visible = true;
 	label3->Visible = true;
-	label4->Visible = false;
-	label5->Visible = false;
+	label4->Visible = true;
+	label5->Visible = true;
 	label6->Visible = false;
 	label7->Visible = false;
 	label8->Visible = false;
@@ -510,8 +528,8 @@ private: System::Void client_CheckedChanged(System::Object^ sender, System::Even
 	textBox1->Visible = true;
 	textBox2->Visible = true;
 	textBox3->Visible = true;
-	textBox4->Visible = false;
-	textBox5->Visible = false;
+	textBox4->Visible = true;
+	textBox5->Visible = true;
 	textBox6->Visible = false;
 	textBox7->Visible = false;
 	textBox8->Visible = false;
@@ -523,6 +541,8 @@ private: System::Void client_CheckedChanged(System::Object^ sender, System::Even
 	label1->Text = "Nom :";
 	label2->Text = "Prénom :";
 	label3->Text = "Date de naissance :";
+	label4->Text = "Adresse 1 :";
+	label5->Text = "Adresse 2 :";
 }
 private: System::Void commande_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 	creer->Visible = true;
@@ -673,6 +693,17 @@ private: System::Void afficher_Click(System::Object^ sender, System::EventArgs^ 
 		
 		/* requete 6 : */
 		textBox7->Text = req.recuperer("SELECT SUM(prix_ttc) FROM commande INNER JOIN client WHERE commande.id_client = client.id_client And Client.nom = " + textBox4->Text + " Client.prenom = " + textBox5->Text);
+	}
+}
+private: System::Void creer_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (personnel->Checked)
+	{
+		requete req;
+		req.envoyer("INSERT INTO DATE(date) VALUES('"+textBox4->Text +"')");
+		req.envoyer("INSERT INTO ADRESSE(adresse,cp,ville,pays) VALUES('"+textBox5->Text+"','"+textBox6->Text+"','"+textBox7->Text+"','"+textBox8->Text+"')");
+		String^ X = req.recuperer("SELECT ID from adresse WHERE adresse.ADRESSE = '" + textBox5->Text + "' AND ADRESSE.CP = '" + textBox6->Text+"'");
+		String^ Y = req.recuperer("SELECT ID FROM DATE Where DATE.DATE = "+textBox4->Text);
+		communication->Text = req.envoyer("INSERT INTO PERSONNEL(ID_ADRESSE, ID_superieur, ID_DATEEMBAUCHE, NOM, PRENOM) VALUES ('"+X+"', '"+textBox3->Text+"','"+Y+"',  '"+textBox1->Text+"', '"+textBox2->Text+"')");
 	}
 }
 };

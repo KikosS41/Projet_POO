@@ -10,5 +10,6 @@ private :
 	
 public :
 	String^ recuperer(String^);
+	String^ envoyer(String^);
 };
 
