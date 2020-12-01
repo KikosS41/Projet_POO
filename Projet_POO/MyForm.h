@@ -69,6 +69,10 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::TextBox^ textBox10;
 	private: System::Windows::Forms::TextBox^ communication;
+	private: System::Windows::Forms::Label^ label11;
+	private: System::Windows::Forms::TextBox^ textBox11;
+	private: System::Windows::Forms::Label^ label12;
+	private: System::Windows::Forms::TextBox^ textBox12;
 
 
 	private:
@@ -115,6 +119,10 @@ namespace ProjetPOO {
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
 			this->communication = (gcnew System::Windows::Forms::TextBox());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -389,7 +397,7 @@ namespace ProjetPOO {
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(449, 276);
+			this->dataGridView1->Size = System::Drawing::Size(449, 334);
 			this->dataGridView1->TabIndex = 27;
 			this->dataGridView1->Visible = false;
 			// 
@@ -413,19 +421,59 @@ namespace ProjetPOO {
 			// 
 			// communication
 			// 
-			this->communication->Location = System::Drawing::Point(650, 13);
+			this->communication->Location = System::Drawing::Point(801, 13);
 			this->communication->Multiline = true;
 			this->communication->Name = L"communication";
 			this->communication->ReadOnly = true;
 			this->communication->Size = System::Drawing::Size(278, 130);
 			this->communication->TabIndex = 30;
 			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(12, 453);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(54, 17);
+			this->label11->TabIndex = 31;
+			this->label11->Text = L"label11";
+			this->label11->Visible = false;
+			// 
+			// textBox11
+			// 
+			this->textBox11->Location = System::Drawing::Point(338, 450);
+			this->textBox11->Name = L"textBox11";
+			this->textBox11->Size = System::Drawing::Size(251, 22);
+			this->textBox11->TabIndex = 32;
+			this->textBox11->Visible = false;
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Location = System::Drawing::Point(12, 481);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(54, 17);
+			this->label12->TabIndex = 33;
+			this->label12->Text = L"label12";
+			this->label12->Visible = false;
+			// 
+			// textBox12
+			// 
+			this->textBox12->Location = System::Drawing::Point(338, 478);
+			this->textBox12->Name = L"textBox12";
+			this->textBox12->Size = System::Drawing::Size(251, 22);
+			this->textBox12->TabIndex = 34;
+			this->textBox12->Visible = false;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoScroll = true;
-			this->ClientSize = System::Drawing::Size(1091, 456);
+			this->ClientSize = System::Drawing::Size(1091, 541);
+			this->Controls->Add(this->textBox12);
+			this->Controls->Add(this->label12);
+			this->Controls->Add(this->textBox11);
+			this->Controls->Add(this->label11);
 			this->Controls->Add(this->communication);
 			this->Controls->Add(this->textBox10);
 			this->Controls->Add(this->label10);
@@ -478,33 +526,34 @@ private: System::Void personnel_CheckedChanged(System::Object^ sender, System::E
 	label3->Visible = true;
 	label4->Visible = true;
 	label5->Visible = true;
-	label6->Visible = true;
-	label7->Visible = true;
-	label8->Visible = true;
+	label6->Visible = false;
+	label7->Visible = false;
+	label8->Visible = false;
 	label9->Visible = false;
 	label10->Visible = false;
+	label11->Visible = false;
+	label12->Visible = false;
 
 	textBox1->Visible = true;
 	textBox2->Visible = true;
 	textBox3->Visible = true;
 	textBox4->Visible = true;
 	textBox5->Visible = true;
-	textBox6->Visible = true;
-	textBox7->Visible = true;
-	textBox8->Visible = true;
+	textBox6->Visible = false;
+	textBox7->Visible = false;
+	textBox8->Visible = false;
 	textBox9->Visible = false;
 	textBox10->Visible = false;
+	textBox11->Visible = false;
+	textBox12->Visible = false;
 
 	dataGridView1->Visible = true;
 
 	label1->Text = "Nom :";
 	label2->Text = "Prénom :";
 	label3->Text = "Supérieur :";
-	label4->Text = "Date d'embauche :";
+	label4->Text = "Date d'embauche (YYYY-MM-DD) :";
 	label5->Text = "Adresse :";
-	label6->Text = "code postal :";
-	label7->Text = "Ville :";
-	label8->Text = "Pays :";
 }
 
 private: System::Void client_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -519,30 +568,36 @@ private: System::Void client_CheckedChanged(System::Object^ sender, System::Even
 	label3->Visible = true;
 	label4->Visible = true;
 	label5->Visible = true;
-	label6->Visible = false;
+	label6->Visible = true;
 	label7->Visible = false;
 	label8->Visible = false;
 	label9->Visible = false;
 	label10->Visible = false;
+	label11->Visible = false;
+	label12->Visible = false;
 
 	textBox1->Visible = true;
 	textBox2->Visible = true;
 	textBox3->Visible = true;
 	textBox4->Visible = true;
 	textBox5->Visible = true;
-	textBox6->Visible = false;
+	textBox6->Visible = true;
 	textBox7->Visible = false;
 	textBox8->Visible = false;
 	textBox9->Visible = false;
 	textBox10->Visible = false;
+	textBox11->Visible = false;
+	textBox12->Visible = false;
 
 	dataGridView1->Visible = true;
 	
 	label1->Text = "Nom :";
 	label2->Text = "Prénom :";
 	label3->Text = "Date de naissance :";
-	label4->Text = "Adresse 1 :";
-	label5->Text = "Adresse 2 :";
+	label4->Text = "Date de première commande :";
+	label5->Text = "Adresse facturation:";
+	label6->Text = "Adresse livraison :";
+
 }
 private: System::Void commande_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 	creer->Visible = true;
@@ -560,6 +615,8 @@ private: System::Void commande_CheckedChanged(System::Object^ sender, System::Ev
 	label8->Visible = true;
 	label9->Visible = true;
 	label10->Visible = true;
+	label11->Visible = false;
+	label12->Visible = false;
 
 	textBox1->Visible = true;
 	textBox2->Visible = true;
@@ -571,6 +628,8 @@ private: System::Void commande_CheckedChanged(System::Object^ sender, System::Ev
 	textBox8->Visible = true;
 	textBox9->Visible = true;
 	textBox10->Visible = true;
+	textBox11->Visible = false;
+	textBox12->Visible = false;
 
 	dataGridView1->Visible = false;
 
@@ -602,6 +661,8 @@ private: System::Void stock_CheckedChanged(System::Object^ sender, System::Event
 	label8->Visible = true;
 	label9->Visible = false;
 	label10->Visible = false;
+	label11->Visible = false;
+	label12->Visible = false;
 
 	textBox1->Visible = true;
 	textBox2->Visible = true;
@@ -613,6 +674,8 @@ private: System::Void stock_CheckedChanged(System::Object^ sender, System::Event
 	textBox8->Visible = true;
 	textBox9->Visible = false;
 	textBox10->Visible = false;
+	textBox11->Visible = false;
+	textBox12->Visible = false;
 
 	dataGridView1->Visible = false;
 
@@ -642,6 +705,8 @@ private: System::Void statistique_CheckedChanged(System::Object^ sender, System:
 	label8->Visible = true;
 	label9->Visible = true;
 	label10->Visible = true;
+	label11->Visible = false;
+	label12->Visible = false;
 
 	textBox1->Visible = true;
 	textBox2->Visible = true;
@@ -653,6 +718,8 @@ private: System::Void statistique_CheckedChanged(System::Object^ sender, System:
 	textBox8->Visible = true;
 	textBox9->Visible = true;
 	textBox10->Visible = true;
+	textBox11->Visible = false;
+	textBox12->Visible = false;
 
 	dataGridView1->Visible = true;
 
@@ -696,14 +763,32 @@ private: System::Void afficher_Click(System::Object^ sender, System::EventArgs^ 
 	}
 }
 private: System::Void creer_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+	requete req;
+
 	if (personnel->Checked)
 	{
-		requete req;
-		req.envoyer("INSERT INTO DATE(date) VALUES('"+textBox4->Text +"')");
-		req.envoyer("INSERT INTO ADRESSE(adresse,cp,ville,pays) VALUES('"+textBox5->Text+"','"+textBox6->Text+"','"+textBox7->Text+"','"+textBox8->Text+"')");
-		String^ X = req.recuperer("SELECT ID from adresse WHERE adresse.ADRESSE = '" + textBox5->Text + "' AND ADRESSE.CP = '" + textBox6->Text+"'");
-		String^ Y = req.recuperer("SELECT ID FROM DATE Where DATE.DATE = "+textBox4->Text);
+		req.envoyer("insert into date(Date) select * FROM(SELECT '" + textBox4 + "'  as dat  from DUAL) as temp where not exists(SELECT Date FROM DAte WHERE date.date = temp.dat)");
+		req.envoyer("insert into adresse(Adresse) select * FROM (SELECT '" + textBox5->Text + "'  as adr  from DUAL) as temp where not exists(SELECT Adresse FROM adresse WHERE adresse.Adresse = temp.adr)");
+		
+		String^ X = req.recuperer("SELECT ID from adresse WHERE adresse.ADRESSE = '" + textBox5->Text + "'");
+		String^ Y = req.recuperer("SELECT ID FROM DATE Where DATE.DATE = '"+ textBox4->Text + "'");
+
 		communication->Text = req.envoyer("INSERT INTO PERSONNEL(ID_ADRESSE, ID_superieur, ID_DATEEMBAUCHE, NOM, PRENOM) VALUES ('"+X+"', '"+textBox3->Text+"','"+Y+"',  '"+textBox1->Text+"', '"+textBox2->Text+"')");
+	}
+	if (client->Checked)
+	{
+		req.envoyer("INSERT INTO ADRESSE(ADRESSE, CP, VILLE, PAYS) VALUES('"+textBox5->Text+"', '"+ textBox6->Text +"', '"+ textBox7->Text +"', '"+ textBox8->Text +"')");
+		req.envoyer("INSERT INTO ADRESSE(ADRESSE, CP, VILLE, PAYS) VALUES('" + textBox9->Text + "', '" + textBox10->Text + "', '" + textBox11->Text + "', '" + textBox12->Text + "')");
+		req.envoyer("INSERT INTO DATE(date) VALUES('" + textBox3->Text + "')");
+		req.envoyer("INSERT INTO DATE(date) VALUES('" + textBox4->Text + "')");
+		
+		String^ Xliv = req.recuperer("SELECT ID from adresse WHERE adresse.ADRESSE = '" + textBox5->Text + "' AND ADRESSE.CP = '" + textBox6->Text + "'");
+		String^ Xfac = req.recuperer("SELECT ID from adresse WHERE adresse.ADRESSE = '" + textBox9->Text + "' AND ADRESSE.CP = '" + textBox10->Text + "'");
+		String^ Yanniv = req.recuperer("SELECT ID FROM DATE Where DATE.DATE = " + textBox3->Text);
+		String^ Yachat = req.recuperer("SELECT ID FROM DATE Where DATE.DATE = " + textBox4->Text);
+		
+		communication->Text = req.envoyer("INSERT INTO CLIENT(ID_ADRESSELIVRAISON, ID_ADRESSEFACTURATION, ID_DATENAISSANCE,ID_DATE1ER, NOM, PRENOM) VALUES ('" + Xliv + "', '" + Xfac + "', '"+Yanniv+ "', '" + Yachat + "', '" + textBox1->Text + "', '" + textBox2->Text + "')");
 	}
 }
 };
