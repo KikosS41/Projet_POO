@@ -81,7 +81,8 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::TextBox^ textBox12;
 	private: System::Windows::Forms::Label^ labelID;
-	private: System::Windows::Forms::TextBox^ textBox13;
+	private: System::Windows::Forms::TextBox^ textBoxID;
+
 
 
 	private:
@@ -133,7 +134,7 @@ namespace ProjetPOO {
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
 			this->labelID = (gcnew System::Windows::Forms::Label());
-			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxID = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -485,13 +486,13 @@ namespace ProjetPOO {
 			this->labelID->Text = L"ID :";
 			this->labelID->Visible = false;
 			// 
-			// textBox13
+			// textBoxID
 			// 
-			this->textBox13->Location = System::Drawing::Point(662, 82);
-			this->textBox13->Name = L"textBox13";
-			this->textBox13->Size = System::Drawing::Size(62, 22);
-			this->textBox13->TabIndex = 36;
-			this->textBox13->Visible = false;
+			this->textBoxID->Location = System::Drawing::Point(662, 82);
+			this->textBoxID->Name = L"textBoxID";
+			this->textBoxID->Size = System::Drawing::Size(62, 22);
+			this->textBoxID->TabIndex = 36;
+			this->textBoxID->Visible = false;
 			// 
 			// MyForm
 			// 
@@ -499,7 +500,7 @@ namespace ProjetPOO {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoScroll = true;
 			this->ClientSize = System::Drawing::Size(1091, 541);
-			this->Controls->Add(this->textBox13);
+			this->Controls->Add(this->textBoxID);
 			this->Controls->Add(this->labelID);
 			this->Controls->Add(this->textBox12);
 			this->Controls->Add(this->label12);
@@ -606,6 +607,7 @@ private: System::Void client_CheckedChanged(System::Object^ sender, System::Even
 	label10->Visible = false;
 	label11->Visible = false;
 	label12->Visible = false;
+	labelID->Visible = true;
 
 	textBox1->Visible = true;
 	textBox2->Visible = true;
@@ -619,6 +621,7 @@ private: System::Void client_CheckedChanged(System::Object^ sender, System::Even
 	textBox10->Visible = false;
 	textBox11->Visible = false;
 	textBox12->Visible = false;
+	textBoxID->Visible = true;
 
 	dataGridView1->Visible = true;
 	
@@ -648,6 +651,7 @@ private: System::Void commande_CheckedChanged(System::Object^ sender, System::Ev
 	label10->Visible = true;
 	label11->Visible = false;
 	label12->Visible = false;
+	labelID->Visible = false;
 
 	textBox1->Visible = true;
 	textBox2->Visible = true;
@@ -661,6 +665,7 @@ private: System::Void commande_CheckedChanged(System::Object^ sender, System::Ev
 	textBox10->Visible = true;
 	textBox11->Visible = false;
 	textBox12->Visible = false;
+	textBoxID->Visible = true;
 
 	dataGridView1->Visible = false;
 
@@ -694,6 +699,7 @@ private: System::Void stock_CheckedChanged(System::Object^ sender, System::Event
 	label10->Visible = false;
 	label11->Visible = false;
 	label12->Visible = false;
+	labelID->Visible = true;
 
 	textBox1->Visible = true;
 	textBox2->Visible = true;
@@ -707,6 +713,7 @@ private: System::Void stock_CheckedChanged(System::Object^ sender, System::Event
 	textBox10->Visible = false;
 	textBox11->Visible = false;
 	textBox12->Visible = false;
+	textBoxID->Visible = true;
 
 	dataGridView1->Visible = false;
 
@@ -738,6 +745,7 @@ private: System::Void statistique_CheckedChanged(System::Object^ sender, System:
 	label10->Visible = true;
 	label11->Visible = false;
 	label12->Visible = false;
+	labelID->Visible = false;
 
 	textBox1->Visible = true;
 	textBox2->Visible = true;
@@ -751,6 +759,7 @@ private: System::Void statistique_CheckedChanged(System::Object^ sender, System:
 	textBox10->Visible = true;
 	textBox11->Visible = false;
 	textBox12->Visible = false;
+	textBoxID->Visible = false;
 
 	dataGridView1->Visible = true;
 

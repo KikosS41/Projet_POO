@@ -29,3 +29,21 @@ String^ CL_Statistique::top10_articles_les_moins_vendus()
 {
 	return "SELECT TOP 10 Nom_Article FROM Articles INNER JOIN Contient ON Articles.ID_Articles = Contient.ID_Articles ORDER BY Quantité_COMMANDEE ASC ;";
 }
+
+String^ CL_Statistique::valeur_commerciale()
+{
+	throw gcnew System::NotImplementedException();
+	// TODO: insérer une instruction return ici
+}
+
+String^ CL_Statistique::valeur_achat()
+{
+	throw gcnew System::NotImplementedException();
+	// TODO: insérer une instruction return ici
+}
+
+String^ CL_Statistique::variation_valeur()
+{
+	throw gcnew System::NotImplementedException();
+	// TODO: insérer une instruction return ici
+}
