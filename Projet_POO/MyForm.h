@@ -1,6 +1,13 @@
 #pragma once
 
 #include "requete.h"
+#include "CL_Personnel.h"
+#include "CL_adresse_date.h"
+#include "CL_Client.h"
+#include "CL_commande.h"
+#include "CL_stock.h"
+#include "CL_Statistique.h"
+
 
 namespace ProjetPOO {
 
@@ -73,6 +80,8 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::TextBox^ textBox11;
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::TextBox^ textBox12;
+	private: System::Windows::Forms::Label^ labelID;
+	private: System::Windows::Forms::TextBox^ textBox13;
 
 
 	private:
@@ -123,6 +132,8 @@ namespace ProjetPOO {
 			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
+			this->labelID = (gcnew System::Windows::Forms::Label());
+			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -464,12 +475,32 @@ namespace ProjetPOO {
 			this->textBox12->TabIndex = 34;
 			this->textBox12->Visible = false;
 			// 
+			// labelID
+			// 
+			this->labelID->AutoSize = true;
+			this->labelID->Location = System::Drawing::Point(627, 84);
+			this->labelID->Name = L"labelID";
+			this->labelID->Size = System::Drawing::Size(29, 17);
+			this->labelID->TabIndex = 35;
+			this->labelID->Text = L"ID :";
+			this->labelID->Visible = false;
+			// 
+			// textBox13
+			// 
+			this->textBox13->Location = System::Drawing::Point(662, 82);
+			this->textBox13->Name = L"textBox13";
+			this->textBox13->Size = System::Drawing::Size(62, 22);
+			this->textBox13->TabIndex = 36;
+			this->textBox13->Visible = false;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoScroll = true;
 			this->ClientSize = System::Drawing::Size(1091, 541);
+			this->Controls->Add(this->textBox13);
+			this->Controls->Add(this->labelID);
 			this->Controls->Add(this->textBox12);
 			this->Controls->Add(this->label12);
 			this->Controls->Add(this->textBox11);
@@ -741,54 +772,52 @@ private: System::Void afficher_Click(System::Object^ sender, System::EventArgs^ 
 	if (statistique->Checked)
 	{
 		requete req;
+		CL_Statistique stats;
 
-		/* requete 1 : */
-		textBox1->Text = req.recuperer("SELECT AVG(PRIX_TTC_COMMANDE) FROM commande");
-
-		/* requete 2 : */
-		textBox2->Text = req.recuperer("SELECT SUM(prix_ttc) FROM commande INNER JOIN date WHERE commande.dateemission = date.ID_DATE and MONTH(date.date) = " + textBox2->Text);
-		
-		/* requete 3 : */
-		textBox3->Text = req.recuperer("SELECT Nom_article from article WHERE stock_article < seuil_reapro");
-		
-		/* requete 4 : */
-		
-		textBox4->Text = req.recuperer("SELECT SUM(prix_ttc) FROM commande INNER JOIN client WHERE commande.id_client = client.id_client And Client.nom = " + textBox4->Text + " Client.prenom = " + textBox5->Text);
-		
-		/* requete 5 : */
-		textBox6->Text = req.recuperer("SELECT TOP 10 Nom_Article FROM Articles INNER JOIN Contient ON Articles.ID_Articles = Contient.ID_Articles ORDER BY Quantité_COMMANDEE DESC ;");
-		
-		/* requete 6 : */
-		textBox7->Text = req.recuperer("SELECT SUM(prix_ttc) FROM commande INNER JOIN client WHERE commande.id_client = client.id_client And Client.nom = " + textBox4->Text + " Client.prenom = " + textBox5->Text);
+		textBox1->Text = req.recuperer(stats.panier_moyen());
+		textBox2->Text = req.recuperer(stats.chiffre_daffaire_sur_un_mois(textBox2->Text));
+		textBox3->Text = req.recuperer(stats.produit_sous_le_seuil_de_reaprovisionnement());
+		textBox4->Text = req.recuperer(stats.montant_total_des_achats_pour_un_client(textBox4->Text, textBox5->Text));
+		textBox6->Text = req.recuperer(stats.top10_articles_les_plus_vendus());
+		textBox7->Text = req.recuperer(stats.top10_articles_les_moins_vendus());
 	}
 }
 private: System::Void creer_Click(System::Object^ sender, System::EventArgs^ e) {
 	
 	requete req;
+	CL_Personnel pers;
+	CL_adresse_date ad;
+	CL_Client cli;
 
 	if (personnel->Checked)
 	{
-		req.envoyer("insert into date(Date) select * FROM(SELECT '" + textBox4 + "'  as dat  from DUAL) as temp where not exists(SELECT Date FROM DAte WHERE date.date = temp.dat)");
-		req.envoyer("insert into adresse(Adresse) select * FROM (SELECT '" + textBox5->Text + "'  as adr  from DUAL) as temp where not exists(SELECT Adresse FROM adresse WHERE adresse.Adresse = temp.adr)");
+		req.envoyer(ad.creer_adresse(textBox5->Text));
+		req.envoyer(ad.creer_date(textBox4->Text));
 		
-		String^ X = req.recuperer("SELECT ID from adresse WHERE adresse.ADRESSE = '" + textBox5->Text + "'");
-		String^ Y = req.recuperer("SELECT ID FROM DATE Where DATE.DATE = '"+ textBox4->Text + "'");
+		String^ X = req.recuperer(ad.recup_id_adresse(textBox5->Text));
+		String^ Y = req.recuperer(ad.recup_id_date(textBox4->Text));
 
-		communication->Text = req.envoyer("INSERT INTO PERSONNEL(ID_ADRESSE, ID_superieur, ID_DATEEMBAUCHE, NOM, PRENOM) VALUES ('"+X+"', '"+textBox3->Text+"','"+Y+"',  '"+textBox1->Text+"', '"+textBox2->Text+"')");
+		communication->Text = req.envoyer(pers.creer(X, textBox3->Text, Y, textBox1->Text, textBox2->Text));
 	}
 	if (client->Checked)
 	{
-		req.envoyer("INSERT INTO ADRESSE(ADRESSE, CP, VILLE, PAYS) VALUES('"+textBox5->Text+"', '"+ textBox6->Text +"', '"+ textBox7->Text +"', '"+ textBox8->Text +"')");
-		req.envoyer("INSERT INTO ADRESSE(ADRESSE, CP, VILLE, PAYS) VALUES('" + textBox9->Text + "', '" + textBox10->Text + "', '" + textBox11->Text + "', '" + textBox12->Text + "')");
-		req.envoyer("INSERT INTO DATE(date) VALUES('" + textBox3->Text + "')");
-		req.envoyer("INSERT INTO DATE(date) VALUES('" + textBox4->Text + "')");
+		req.envoyer(ad.creer_adresse(textBox5->Text));
+		req.envoyer(ad.creer_adresse(textBox6->Text));
+		communication->Text = req.envoyer(ad.creer_date(textBox3->Text));
+		req.envoyer(ad.creer_date(textBox4->Text));
+
+		String^ Xfac = req.recuperer(ad.recup_id_adresse(textBox5->Text));
+		String^ Xliv = req.recuperer(ad.recup_id_adresse(textBox6->Text));
+
+		String^ Yanniv = req.recuperer(ad.recup_id_date(textBox3->Text));
+		String^ Yachat = req.recuperer(ad.recup_id_date(textBox4->Text));
 		
-		String^ Xliv = req.recuperer("SELECT ID from adresse WHERE adresse.ADRESSE = '" + textBox5->Text + "' AND ADRESSE.CP = '" + textBox6->Text + "'");
-		String^ Xfac = req.recuperer("SELECT ID from adresse WHERE adresse.ADRESSE = '" + textBox9->Text + "' AND ADRESSE.CP = '" + textBox10->Text + "'");
-		String^ Yanniv = req.recuperer("SELECT ID FROM DATE Where DATE.DATE = " + textBox3->Text);
-		String^ Yachat = req.recuperer("SELECT ID FROM DATE Where DATE.DATE = " + textBox4->Text);
 		
-		communication->Text = req.envoyer("INSERT INTO CLIENT(ID_ADRESSELIVRAISON, ID_ADRESSEFACTURATION, ID_DATENAISSANCE,ID_DATE1ER, NOM, PRENOM) VALUES ('" + Xliv + "', '" + Xfac + "', '"+Yanniv+ "', '" + Yachat + "', '" + textBox1->Text + "', '" + textBox2->Text + "')");
+		req.envoyer(cli.creer(Xliv, Xfac, Yanniv, Yachat, textBox1->Text, textBox2->Text));
+	}
+	if (stock->Checked)
+	{
+		;
 	}
 }
 };

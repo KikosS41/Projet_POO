@@ -121,10 +121,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CL_adresse_date.cpp" />
+    <ClCompile Include="CL_Client.cpp" />
+    <ClCompile Include="CL_commande.cpp" />
+    <ClCompile Include="CL_Personnel.cpp" />
+    <ClCompile Include="CL_Statistique.cpp" />
+    <ClCompile Include="CL_stock.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="requete.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CL_adresse_date.h" />
+    <ClInclude Include="CL_Client.h" />
+    <ClInclude Include="CL_commande.h" />
+    <ClInclude Include="CL_Personnel.h" />
+    <ClInclude Include="CL_Statistique.h" />
+    <ClInclude Include="CL_stock.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
