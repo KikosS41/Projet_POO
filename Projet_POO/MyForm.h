@@ -93,6 +93,7 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::TextBox^ textBox12;
 	private: System::Windows::Forms::BindingSource^ bindingSource1;
+	private: System::Windows::Forms::Button^ actualiser;
 	private: System::ComponentModel::IContainer^ components;
 	private:
 		/// <summary>
@@ -159,6 +160,7 @@ namespace ProjetPOO {
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
 			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
+			this->actualiser = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->groupBoxID->SuspendLayout();
 			this->groupBox1->SuspendLayout();
@@ -183,7 +185,7 @@ namespace ProjetPOO {
 			this->creer->Name = L"creer";
 			this->creer->Size = System::Drawing::Size(143, 30);
 			this->creer->TabIndex = 0;
-			this->creer->Text = L"Cr�er";
+			this->creer->Text = L"Créer";
 			this->creer->UseVisualStyleBackColor = true;
 			this->creer->Visible = false;
 			this->creer->Click += gcnew System::EventHandler(this, &MyForm::creer_Click);
@@ -331,7 +333,7 @@ namespace ProjetPOO {
 			// labelID
 			// 
 			this->labelID->AutoSize = true;
-			this->labelID->Location = System::Drawing::Point(4, 12);
+			this->labelID->Location = System::Drawing::Point(7, 12);
 			this->labelID->Name = L"labelID";
 			this->labelID->Size = System::Drawing::Size(29, 17);
 			this->labelID->TabIndex = 35;
@@ -701,12 +703,23 @@ namespace ProjetPOO {
 			this->textBox12->Size = System::Drawing::Size(251, 22);
 			this->textBox12->TabIndex = 14;
 			// 
+			// actualiser
+			// 
+			this->actualiser->Location = System::Drawing::Point(590, 10);
+			this->actualiser->Name = L"actualiser";
+			this->actualiser->Size = System::Drawing::Size(143, 30);
+			this->actualiser->TabIndex = 50;
+			this->actualiser->Text = L"Actualiser";
+			this->actualiser->UseVisualStyleBackColor = true;
+			this->actualiser->Click += gcnew System::EventHandler(this, &MyForm::actualiser_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoScroll = true;
 			this->ClientSize = System::Drawing::Size(1091, 578);
+			this->Controls->Add(this->actualiser);
 			this->Controls->Add(this->groupBox12);
 			this->Controls->Add(this->groupBox11);
 			this->Controls->Add(this->groupBox10);
@@ -806,6 +819,21 @@ private: System::Void personnel_CheckedChanged(System::Object^ sender, System::E
 	label3->Text = "Supérieur :";
 	label4->Text = "Date d'embauche (YYYY-MM-DD) :";
 	label5->Text = "Adresse :";
+
+	textBox1->Text = "";
+	textBox2->Text = "";
+	textBox3->Text = "";
+	textBox4->Text = "";
+	textBox5->Text = "";
+	textBox6->Text = "";
+	textBox7->Text = "";
+	textBox8->Text = "";
+	textBox9->Text = "";
+	textBox10->Text = "";
+	textBox11->Text = "";
+	textBox12->Text = "";
+	textBoxID->Text = "";
+
 }
 private: System::Void client_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 
@@ -827,6 +855,20 @@ private: System::Void client_CheckedChanged(System::Object^ sender, System::Even
 	groupBox10->Visible = false;
 	groupBox11->Visible = false;
 	groupBox12->Visible = false;
+
+	textBox1->Text = "";
+	textBox2->Text = "";
+	textBox3->Text = "";
+	textBox4->Text = "";
+	textBox5->Text = "";
+	textBox6->Text = "";
+	textBox7->Text = "";
+	textBox8->Text = "";
+	textBox9->Text = "";
+	textBox10->Text = "";
+	textBox11->Text = "";
+	textBox12->Text = "";
+	textBoxID->Text = "";
 
 	dataGridView1->Visible = true;
 	
@@ -859,6 +901,20 @@ private: System::Void commande_CheckedChanged(System::Object^ sender, System::Ev
 	groupBox10->Visible = true;
 	groupBox11->Visible = false;
 	groupBox12->Visible = false;
+
+	textBox1->Text = "";
+	textBox2->Text = "";
+	textBox3->Text = "";
+	textBox4->Text = "";
+	textBox5->Text = "";
+	textBox6->Text = "";
+	textBox7->Text = "";
+	textBox8->Text = "";
+	textBox9->Text = "";
+	textBox10->Text = "";
+	textBox11->Text = "";
+	textBox12->Text = "";
+	textBoxID->Text = "";
 
 	dataGridView1->Visible = false;
 
@@ -896,6 +952,8 @@ private: System::Void stock_CheckedChanged(System::Object^ sender, System::Event
 
 	dataGridView1->Visible = true;
 
+	communication->Text = req.recuperer_table(art.recuperer_tout(), dataGridView1, bindingSource1);
+
 	label1->Text = "Nom article :";
 	label2->Text = "Nature :";
 	label3->Text = "Couleur :";
@@ -925,6 +983,20 @@ private: System::Void statistique_CheckedChanged(System::Object^ sender, System:
 	groupBox10->Visible = true;
 	groupBox11->Visible = false;
 	groupBox12->Visible = false;
+
+	textBox1->Text = "";
+	textBox2->Text = "";
+	textBox3->Text = "";
+	textBox4->Text = "";
+	textBox5->Text = "";
+	textBox6->Text = "";
+	textBox7->Text = "";
+	textBox8->Text = "";
+	textBox9->Text = "";
+	textBox10->Text = "";
+	textBox11->Text = "";
+	textBox12->Text = "";
+	textBoxID->Text = "";
 
 	dataGridView1->Visible = true;
 
@@ -1028,6 +1100,24 @@ private: System::Void modifier_Click(System::Object^ sender, System::EventArgs^ 
 		req.envoyer(ad.creer_date(textBox3->Text));
 		req.envoyer(ad.creer_date(textBox4->Text));
 		req.envoyer(cli.modifier(textBox6->Text,textBox5->Text,textBox3->Text,textBox4->Text,textBox1->Text,textBox2->Text,textBoxID->Text));
+	}
+}
+private: System::Void actualiser_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (client->Checked)
+	{
+		req.recuperer_table(cli.recuperer_tout(), dataGridView1, bindingSource1);
+	}
+	if (personnel->Checked)
+	{
+		 req.recuperer_table(pers.recuperer_tout(), dataGridView1, bindingSource1);
+	}
+	if (stock->Checked)
+	{
+		req.recuperer_table(art.recuperer_tout(), dataGridView1, bindingSource1);
+	}
+	if (statistique->Checked)
+	{
+		//communication->Text = req.recuperer_table(stats.recuperer_tout(), dataGridView1, bindingSource1);
 	}
 }
 };

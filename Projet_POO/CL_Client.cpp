@@ -13,7 +13,7 @@ String^ CL_Client::modifier(String^ adrliv, String^ adrfac, String^ datenai, Str
 
 String^ CL_Client::supprimer(String^ id)
 {
-    return "DELETE FROM CLIENT WHERE ID_CLIENT = '"+id+"'";
+    return "DELETE FROM CLIENT WHERE client.ID = '"+id+"'";
 }
 
 String^ CL_Client::recuperer_nom(String^id)

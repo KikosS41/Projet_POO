@@ -12,7 +12,7 @@ return "UPDATE PERSONNEL SET ID_ADRESSE = (SELECT ID from adresse WHERE adresse.
 
 String^ CL_Personnel::supprimer(String^ id)
 {
-    return "DELETE FROM PERSONNEL WHERE ID_PERSONNEL = '"+id+"'";
+    return "DELETE FROM PERSONNEL WHERE personnel.ID = '"+id+"'";
 }
 
 String^ CL_Personnel::recuperer_nom(int id)
