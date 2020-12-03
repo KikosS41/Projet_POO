@@ -21,3 +21,15 @@ String^ CL_Personnel::supprimer(String^ id)
 {
     return "DELETE FROM PERSONNEL WHERE ID_PERSONNEL = '"+id+"'";
 }
+
+String^ CL_Personnel::recuperer_nom(String^)
+{
+    throw gcnew System::NotImplementedException();
+    // TODO: insérer une instruction return ici
+}
+
+String^ CL_Personnel::recuperer_prenom(String^)
+{
+    throw gcnew System::NotImplementedException();
+    // TODO: insérer une instruction return ici
+}

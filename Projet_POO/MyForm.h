@@ -773,31 +773,19 @@ private: System::Void personnel_CheckedChanged(System::Object^ sender, System::E
 	supprimer->Visible = true;
 	afficher->Visible = true;
 
-	label1->Visible = true;
-	label2->Visible = true;
-	label3->Visible = true;
-	label4->Visible = true;
-	label5->Visible = true;
-	label6->Visible = false;
-	label7->Visible = false;
-	label8->Visible = false;
-	label9->Visible = false;
-	label10->Visible = false;
-	label11->Visible = false;
-	label12->Visible = false;
-
-	textBox1->Visible = true;
-	textBox2->Visible = true;
-	textBox3->Visible = true;
-	textBox4->Visible = true;
-	textBox5->Visible = true;
-	textBox6->Visible = false;
-	textBox7->Visible = false;
-	textBox8->Visible = false;
-	textBox9->Visible = false;
-	textBox10->Visible = false;
-	textBox11->Visible = false;
-	textBox12->Visible = false;
+	groupBoxID->Visible = true;
+	groupBox1->Visible = true;
+	groupBox2->Visible = true;
+	groupBox3->Visible = true;
+	groupBox4->Visible = true;
+	groupBox5->Visible = true;
+	groupBox6->Visible = false;
+	groupBox7->Visible = false;
+	groupBox8->Visible = false;
+	groupBox9->Visible = false;
+	groupBox10->Visible = false;
+	groupBox11->Visible = false;
+	groupBox12->Visible = false;
 
 	dataGridView1->Visible = true;
 
@@ -861,38 +849,24 @@ private: System::Void commande_CheckedChanged(System::Object^ sender, System::Ev
 	supprimer->Visible = true;
 	afficher->Visible = true;
 
-	label1->Visible = true;
-	label2->Visible = true;
-	label3->Visible = true;
-	label4->Visible = true;
-	label5->Visible = true;
-	label6->Visible = true;
-	label7->Visible = true;
-	label8->Visible = true;
-	label9->Visible = true;
-	label10->Visible = true;
-	label11->Visible = false;
-	label12->Visible = false;
-	labelID->Visible = false;
-
-	textBox1->Visible = true;
-	textBox2->Visible = true;
-	textBox3->Visible = true;
-	textBox4->Visible = true;
-	textBox5->Visible = true;
-	textBox6->Visible = true;
-	textBox7->Visible = true;
-	textBox8->Visible = true;
-	textBox9->Visible = true;
-	textBox10->Visible = true;
-	textBox11->Visible = false;
-	textBox12->Visible = false;
-	textBoxID->Visible = true;
+	groupBoxID->Visible = true;
+	groupBox1->Visible = true;
+	groupBox2->Visible = true;
+	groupBox3->Visible = true;
+	groupBox4->Visible = true;
+	groupBox5->Visible = true;
+	groupBox6->Visible = true;
+	groupBox7->Visible = true;
+	groupBox8->Visible = true;
+	groupBox9->Visible = true;
+	groupBox10->Visible = true;
+	groupBox11->Visible = false;
+	groupBox12->Visible = false;
 
 	dataGridView1->Visible = false;
 
 	label1->Text = "Référence :";
-	label2->Text = "Date de livraison pr�vue :";
+	label2->Text = "Date de livraison prévue :";
 	label3->Text = "Date d'émission :";
 	label4->Text = "Date de paiement :";
 	label5->Text = "Moyen de paiement :";
@@ -952,33 +926,19 @@ private: System::Void statistique_CheckedChanged(System::Object^ sender, System:
 	supprimer->Visible = false;
 	afficher->Visible = true;
 
-	label1->Visible = true;
-	label2->Visible = true;
-	label3->Visible = true;
-	label4->Visible = true;
-	label5->Visible = true;
-	label6->Visible = true;
-	label7->Visible = true;
-	label8->Visible = true;
-	label9->Visible = true;
-	label10->Visible = true;
-	label11->Visible = false;
-	label12->Visible = false;
-	labelID->Visible = false;
-
-	textBox1->Visible = true;
-	textBox2->Visible = true;
-	textBox3->Visible = true;
-	textBox4->Visible = true;
-	textBox5->Visible = true;
-	textBox6->Visible = true;
-	textBox7->Visible = true;
-	textBox8->Visible = true;
-	textBox9->Visible = true;
-	textBox10->Visible = true;
-	textBox11->Visible = false;
-	textBox12->Visible = false;
-	textBoxID->Visible = false;
+	groupBoxID->Visible = false;
+	groupBox1->Visible = true;
+	groupBox2->Visible = true;
+	groupBox3->Visible = true;
+	groupBox4->Visible = true;
+	groupBox5->Visible = true;
+	groupBox6->Visible = true;
+	groupBox7->Visible = true;
+	groupBox8->Visible = true;
+	groupBox9->Visible = true;
+	groupBox10->Visible = true;
+	groupBox11->Visible = false;
+	groupBox12->Visible = false;
 
 	dataGridView1->Visible = true;
 
@@ -993,7 +953,7 @@ private: System::Void statistique_CheckedChanged(System::Object^ sender, System:
 	dataGridView1->Columns[7]->Name = "Valeur d'achat du stock";
 	dataGridView1->Columns[8]->Name = "Variations de valeurs commerciales";
 
-	label1->Text = "Panier moyen (apr�s remise) :";
+	label1->Text = "Panier moyen (après remise) :";
 	label2->Text = "Chiffre d'affaire sur un mois choisi :";
 	label3->Text = "Produits sous le seuil de reapprovisionnement :";
 	label4->Text = "Nom client :";
@@ -1025,6 +985,9 @@ private: System::Void afficher_Click(System::Object^ sender, System::EventArgs^ 
 		textBox7->Text = req.recuperer(stats.top10_articles_les_moins_vendus());
 	}
 	if (client->Checked) {
+		textBox1->Text = req.recuperer(cli.recuperer_nom(textBoxID->Text));
+		textBox2->Text = req.recuperer(cli.recuperer_prenom(textBoxID->Text));
+
 	}
 }
 private: System::Void creer_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1059,10 +1022,10 @@ private: System::Void creer_Click(System::Object^ sender, System::EventArgs^ e) 
 	if (stock->Checked)
 	{
 		req.envoyer(art.creer_tva(textBox6->Text));
-		req.envoyer(art.creer_article(textBox6->Text, textBox1->Text, textBox4->Text, textBox5->Text));
+		req.envoyer(art.creer_nature(textBox2->Text));
 		req.envoyer(art.creer_couleur(textBox3->Text));
-		communication->Text = req.envoyer(art.creer_nature(textBox1->Text, textBox2->Text));
-		req.envoyer(art.creer_tarif(textBox8->Text, textBox7->Text, textBox1->Text, textBox3->Text, textBox2->Text));
+		req.envoyer(art.creer_article(textBox6->Text, textBox1->Text, textBox4->Text, textBox5->Text,textBox2->Text,textBox3->Text));
+		communication->Text = req.envoyer(art.creer_tarif(textBox8->Text, textBox7->Text, textBox1->Text));
 	}
 }
 private: System::Void supprimer_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1088,7 +1051,7 @@ private: System::Void modifier_Click(System::Object^ sender, System::EventArgs^ 
 	
 	if (stock->Checked)
 	{
-		communication->Text = req.envoyer(art.modifier_article(textBox6->Text, textBox1->Text, textBox4->Text, textBox5->Text, textBoxID->Text));
+		communication->Text = req.envoyer(art.modifier_article(textBox6->Text, textBox1->Text, textBox4->Text, textBox5->Text, textBoxID->Text, textBox2->Text, textBox3->Text));
 	}
 }
 };
