@@ -181,9 +181,9 @@ namespace ProjetPOO {
 			// creer
 			// 
 			this->creer->Location = System::Drawing::Point(200, 39);
-			this->creer->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->creer->Margin = System::Windows::Forms::Padding(2);
 			this->creer->Name = L"creer";
-			this->creer->Size = System::Drawing::Size(107, 24);
+			this->creer->Size = System::Drawing::Size(107, 22);
 			this->creer->TabIndex = 0;
 			this->creer->Text = L"Créer";
 			this->creer->UseVisualStyleBackColor = true;
@@ -192,10 +192,10 @@ namespace ProjetPOO {
 			// 
 			// modifier
 			// 
-			this->modifier->Location = System::Drawing::Point(200, 67);
-			this->modifier->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->modifier->Location = System::Drawing::Point(200, 65);
+			this->modifier->Margin = System::Windows::Forms::Padding(2);
 			this->modifier->Name = L"modifier";
-			this->modifier->Size = System::Drawing::Size(107, 24);
+			this->modifier->Size = System::Drawing::Size(107, 22);
 			this->modifier->TabIndex = 1;
 			this->modifier->Text = L"Modifier";
 			this->modifier->UseVisualStyleBackColor = true;
@@ -204,10 +204,10 @@ namespace ProjetPOO {
 			// 
 			// supprimer
 			// 
-			this->supprimer->Location = System::Drawing::Point(200, 96);
-			this->supprimer->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->supprimer->Location = System::Drawing::Point(200, 91);
+			this->supprimer->Margin = System::Windows::Forms::Padding(2);
 			this->supprimer->Name = L"supprimer";
-			this->supprimer->Size = System::Drawing::Size(107, 24);
+			this->supprimer->Size = System::Drawing::Size(107, 22);
 			this->supprimer->TabIndex = 2;
 			this->supprimer->Text = L"Supprimer";
 			this->supprimer->UseVisualStyleBackColor = true;
@@ -216,10 +216,10 @@ namespace ProjetPOO {
 			// 
 			// afficher
 			// 
-			this->afficher->Location = System::Drawing::Point(200, 10);
-			this->afficher->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->afficher->Location = System::Drawing::Point(200, 13);
+			this->afficher->Margin = System::Windows::Forms::Padding(2);
 			this->afficher->Name = L"afficher";
-			this->afficher->Size = System::Drawing::Size(107, 24);
+			this->afficher->Size = System::Drawing::Size(107, 22);
 			this->afficher->TabIndex = 3;
 			this->afficher->Text = L"Afficher";
 			this->afficher->UseVisualStyleBackColor = true;
@@ -230,7 +230,7 @@ namespace ProjetPOO {
 			// 
 			this->personnel->AutoSize = true;
 			this->personnel->Location = System::Drawing::Point(9, 11);
-			this->personnel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->personnel->Margin = System::Windows::Forms::Padding(2);
 			this->personnel->Name = L"personnel";
 			this->personnel->Size = System::Drawing::Size(77, 17);
 			this->personnel->TabIndex = 4;
@@ -243,7 +243,7 @@ namespace ProjetPOO {
 			// 
 			this->client->AutoSize = true;
 			this->client->Location = System::Drawing::Point(9, 32);
-			this->client->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->client->Margin = System::Windows::Forms::Padding(2);
 			this->client->Name = L"client";
 			this->client->Size = System::Drawing::Size(56, 17);
 			this->client->TabIndex = 5;
@@ -256,7 +256,7 @@ namespace ProjetPOO {
 			// 
 			this->commande->AutoSize = true;
 			this->commande->Location = System::Drawing::Point(9, 54);
-			this->commande->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->commande->Margin = System::Windows::Forms::Padding(2);
 			this->commande->Name = L"commande";
 			this->commande->Size = System::Drawing::Size(83, 17);
 			this->commande->TabIndex = 6;
@@ -269,7 +269,7 @@ namespace ProjetPOO {
 			// 
 			this->stock->AutoSize = true;
 			this->stock->Location = System::Drawing::Point(9, 76);
-			this->stock->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->stock->Margin = System::Windows::Forms::Padding(2);
 			this->stock->Name = L"stock";
 			this->stock->Size = System::Drawing::Size(58, 17);
 			this->stock->TabIndex = 7;
@@ -282,7 +282,7 @@ namespace ProjetPOO {
 			// 
 			this->statistique->AutoSize = true;
 			this->statistique->Location = System::Drawing::Point(9, 98);
-			this->statistique->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->statistique->Margin = System::Windows::Forms::Padding(2);
 			this->statistique->Name = L"statistique";
 			this->statistique->Size = System::Drawing::Size(79, 17);
 			this->statistique->TabIndex = 8;
@@ -304,7 +304,7 @@ namespace ProjetPOO {
 			// textBox1
 			// 
 			this->textBox1->Location = System::Drawing::Point(244, 7);
-			this->textBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(189, 20);
 			this->textBox1->TabIndex = 14;
@@ -313,7 +313,7 @@ namespace ProjetPOO {
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Location = System::Drawing::Point(472, 135);
-			this->dataGridView1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->dataGridView1->Margin = System::Windows::Forms::Padding(2);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
@@ -324,7 +324,7 @@ namespace ProjetPOO {
 			// communication
 			// 
 			this->communication->Location = System::Drawing::Point(472, 11);
-			this->communication->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->communication->Margin = System::Windows::Forms::Padding(2);
 			this->communication->Multiline = true;
 			this->communication->Name = L"communication";
 			this->communication->ReadOnly = true;
@@ -344,7 +344,7 @@ namespace ProjetPOO {
 			// textBoxID
 			// 
 			this->textBoxID->Location = System::Drawing::Point(31, 7);
-			this->textBoxID->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBoxID->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxID->Name = L"textBoxID";
 			this->textBoxID->Size = System::Drawing::Size(76, 20);
 			this->textBoxID->TabIndex = 36;
@@ -395,7 +395,7 @@ namespace ProjetPOO {
 			// textBox2
 			// 
 			this->textBox2->Location = System::Drawing::Point(244, 7);
-			this->textBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox2->Margin = System::Windows::Forms::Padding(2);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(189, 20);
 			this->textBox2->TabIndex = 14;
@@ -424,7 +424,7 @@ namespace ProjetPOO {
 			// textBox3
 			// 
 			this->textBox3->Location = System::Drawing::Point(244, 7);
-			this->textBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox3->Margin = System::Windows::Forms::Padding(2);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(189, 20);
 			this->textBox3->TabIndex = 14;
@@ -453,7 +453,7 @@ namespace ProjetPOO {
 			// textBox4
 			// 
 			this->textBox4->Location = System::Drawing::Point(244, 7);
-			this->textBox4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox4->Margin = System::Windows::Forms::Padding(2);
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(189, 20);
 			this->textBox4->TabIndex = 14;
@@ -482,7 +482,7 @@ namespace ProjetPOO {
 			// textBox5
 			// 
 			this->textBox5->Location = System::Drawing::Point(244, 7);
-			this->textBox5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox5->Margin = System::Windows::Forms::Padding(2);
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(189, 20);
 			this->textBox5->TabIndex = 14;
@@ -511,7 +511,7 @@ namespace ProjetPOO {
 			// textBox6
 			// 
 			this->textBox6->Location = System::Drawing::Point(244, 7);
-			this->textBox6->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox6->Margin = System::Windows::Forms::Padding(2);
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(189, 20);
 			this->textBox6->TabIndex = 14;
@@ -540,7 +540,7 @@ namespace ProjetPOO {
 			// textBox7
 			// 
 			this->textBox7->Location = System::Drawing::Point(244, 7);
-			this->textBox7->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox7->Margin = System::Windows::Forms::Padding(2);
 			this->textBox7->Name = L"textBox7";
 			this->textBox7->Size = System::Drawing::Size(189, 20);
 			this->textBox7->TabIndex = 14;
@@ -569,7 +569,7 @@ namespace ProjetPOO {
 			// textBox8
 			// 
 			this->textBox8->Location = System::Drawing::Point(244, 7);
-			this->textBox8->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox8->Margin = System::Windows::Forms::Padding(2);
 			this->textBox8->Name = L"textBox8";
 			this->textBox8->Size = System::Drawing::Size(189, 20);
 			this->textBox8->TabIndex = 14;
@@ -598,7 +598,7 @@ namespace ProjetPOO {
 			// textBox9
 			// 
 			this->textBox9->Location = System::Drawing::Point(244, 7);
-			this->textBox9->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox9->Margin = System::Windows::Forms::Padding(2);
 			this->textBox9->Name = L"textBox9";
 			this->textBox9->Size = System::Drawing::Size(189, 20);
 			this->textBox9->TabIndex = 14;
@@ -627,7 +627,7 @@ namespace ProjetPOO {
 			// textBox10
 			// 
 			this->textBox10->Location = System::Drawing::Point(244, 7);
-			this->textBox10->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox10->Margin = System::Windows::Forms::Padding(2);
 			this->textBox10->Name = L"textBox10";
 			this->textBox10->Size = System::Drawing::Size(189, 20);
 			this->textBox10->TabIndex = 14;
@@ -656,7 +656,7 @@ namespace ProjetPOO {
 			// textBox11
 			// 
 			this->textBox11->Location = System::Drawing::Point(244, 7);
-			this->textBox11->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox11->Margin = System::Windows::Forms::Padding(2);
 			this->textBox11->Name = L"textBox11";
 			this->textBox11->Size = System::Drawing::Size(189, 20);
 			this->textBox11->TabIndex = 14;
@@ -685,15 +685,15 @@ namespace ProjetPOO {
 			// textBox12
 			// 
 			this->textBox12->Location = System::Drawing::Point(244, 7);
-			this->textBox12->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox12->Margin = System::Windows::Forms::Padding(2);
 			this->textBox12->Name = L"textBox12";
 			this->textBox12->Size = System::Drawing::Size(189, 20);
 			this->textBox12->TabIndex = 14;
 			// 
 			// actualiser
 			// 
-			this->actualiser->Location = System::Drawing::Point(335, 7);
-			this->actualiser->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->actualiser->Location = System::Drawing::Point(335, 13);
+			this->actualiser->Margin = System::Windows::Forms::Padding(2);
 			this->actualiser->Name = L"actualiser";
 			this->actualiser->Size = System::Drawing::Size(107, 52);
 			this->actualiser->TabIndex = 50;
@@ -732,7 +732,7 @@ namespace ProjetPOO {
 			this->Controls->Add(this->supprimer);
 			this->Controls->Add(this->modifier);
 			this->Controls->Add(this->creer);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
