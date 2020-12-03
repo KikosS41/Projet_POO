@@ -24,7 +24,7 @@ String^ requete::recuperer(String^ instruction)
 
 String^ requete::envoyer(String^instruction)
 {
-	try{
+	try {
 	MySqlConnection^ con = gcnew MySqlConnection(cnx);
 	MySqlCommand^ req = gcnew MySqlCommand(instruction, con);
 	con->Open();

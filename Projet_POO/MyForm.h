@@ -1011,7 +1011,7 @@ private: System::Void statistique_CheckedChanged(System::Object^ sender, System:
 	   CL_adresse_date ad;
 	   CL_Client cli;
 	   CL_stock art;
-	   CL_commande com;
+	   CL_commande com;	
 	   CL_Statistique stats;
 
 private: System::Void afficher_Click(System::Object^ sender, System::EventArgs^ e) {
