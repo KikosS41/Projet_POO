@@ -15,11 +15,11 @@ String^ requete::recuperer(String^ instruction)
 	}
 	con->Close();
 	dr->Close();
-	return resultat;
+	return "La connexion a réussie" + "\r\n";
 
 	}
 	catch (Exception^ ex) {
-		return ex->Message;
+		return "La connextion a échouée.\r\n Erreur :" + ex->Message + "\r\n";
 	}
 }
 
@@ -35,11 +35,11 @@ String^ requete::recuperer_table(String^ req,DataGridView^ dataGridView1, Bindin
 	cmd->Fill(dt);
 	bindingSource1->DataSource = dt;
 	dataGridView1->DataSource = bindingSource1;
-	return "Table importé";
+	return "Table importé" + "\r\n";
 
 	}
 	catch (Exception^ ex) {
-		return ex->Message;
+		return "Une erreur est survenue lors de l'importation de la table.\r\n Erreur :" + ex->Message + "\r\n";
 	}
 }
 
@@ -54,7 +54,6 @@ String^ requete::envoyer(String^instruction)
 	con->Close();
 	}
 	catch (Exception^ ex) {
-		//messagebox de communication
-		return ex->Message;
+		return "Une erreur est survenue lors de l'envoie des données.\r\n Erreur : " + ex->Message + "\r\n";
 	}
 }
