@@ -11,6 +11,7 @@ private :
 	
 public :
 	String^ recuperer(String^);
+	String^ recuperer_table(String^);
 	String^ envoyer(String^);
 };
 

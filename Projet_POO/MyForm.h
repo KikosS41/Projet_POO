@@ -28,9 +28,6 @@ namespace ProjetPOO {
 		MyForm(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: ajoutez ici le code du constructeur
-			//
 		}
 
 	protected:
@@ -95,11 +92,13 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::GroupBox^ groupBox12;
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::TextBox^ textBox12;
+	private: System::Windows::Forms::BindingSource^ bindingSource1;
+	private: System::ComponentModel::IContainer^ components;
 	private:
 		/// <summary>
 		/// Variable n�cessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -108,6 +107,7 @@ namespace ProjetPOO {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			this->creer = (gcnew System::Windows::Forms::Button());
 			this->modifier = (gcnew System::Windows::Forms::Button());
 			this->supprimer = (gcnew System::Windows::Forms::Button());
@@ -158,6 +158,7 @@ namespace ProjetPOO {
 			this->groupBox12 = (gcnew System::Windows::Forms::GroupBox());
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
+			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->groupBoxID->SuspendLayout();
 			this->groupBox1->SuspendLayout();
@@ -172,6 +173,7 @@ namespace ProjetPOO {
 			this->groupBox10->SuspendLayout();
 			this->groupBox11->SuspendLayout();
 			this->groupBox12->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// creer
@@ -348,9 +350,9 @@ namespace ProjetPOO {
 			this->groupBoxID->Controls->Add(this->labelID);
 			this->groupBoxID->Controls->Add(this->textBoxID);
 			this->groupBoxID->Location = System::Drawing::Point(629, 71);
-			this->groupBoxID->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBoxID->Margin = System::Windows::Forms::Padding(4);
 			this->groupBoxID->Name = L"groupBoxID";
-			this->groupBoxID->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBoxID->Padding = System::Windows::Forms::Padding(4);
 			this->groupBoxID->Size = System::Drawing::Size(107, 36);
 			this->groupBoxID->TabIndex = 37;
 			this->groupBoxID->TabStop = false;
@@ -361,9 +363,9 @@ namespace ProjetPOO {
 			this->groupBox1->Controls->Add(this->label1);
 			this->groupBox1->Controls->Add(this->textBox1);
 			this->groupBox1->Location = System::Drawing::Point(12, 155);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(4);
 			this->groupBox1->Size = System::Drawing::Size(579, 36);
 			this->groupBox1->TabIndex = 38;
 			this->groupBox1->TabStop = false;
@@ -374,9 +376,9 @@ namespace ProjetPOO {
 			this->groupBox2->Controls->Add(this->label2);
 			this->groupBox2->Controls->Add(this->textBox2);
 			this->groupBox2->Location = System::Drawing::Point(12, 190);
-			this->groupBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox2->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox2->Padding = System::Windows::Forms::Padding(4);
 			this->groupBox2->Size = System::Drawing::Size(579, 36);
 			this->groupBox2->TabIndex = 39;
 			this->groupBox2->TabStop = false;
@@ -404,9 +406,9 @@ namespace ProjetPOO {
 			this->groupBox3->Controls->Add(this->label3);
 			this->groupBox3->Controls->Add(this->textBox3);
 			this->groupBox3->Location = System::Drawing::Point(12, 224);
-			this->groupBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox3->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox3->Name = L"groupBox3";
-			this->groupBox3->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox3->Padding = System::Windows::Forms::Padding(4);
 			this->groupBox3->Size = System::Drawing::Size(579, 36);
 			this->groupBox3->TabIndex = 40;
 			this->groupBox3->TabStop = false;
@@ -434,9 +436,9 @@ namespace ProjetPOO {
 			this->groupBox4->Controls->Add(this->label4);
 			this->groupBox4->Controls->Add(this->textBox4);
 			this->groupBox4->Location = System::Drawing::Point(12, 258);
-			this->groupBox4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox4->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox4->Name = L"groupBox4";
-			this->groupBox4->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox4->Padding = System::Windows::Forms::Padding(4);
 			this->groupBox4->Size = System::Drawing::Size(579, 36);
 			this->groupBox4->TabIndex = 41;
 			this->groupBox4->TabStop = false;
@@ -464,9 +466,9 @@ namespace ProjetPOO {
 			this->groupBox5->Controls->Add(this->label5);
 			this->groupBox5->Controls->Add(this->textBox5);
 			this->groupBox5->Location = System::Drawing::Point(12, 293);
-			this->groupBox5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox5->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox5->Name = L"groupBox5";
-			this->groupBox5->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox5->Padding = System::Windows::Forms::Padding(4);
 			this->groupBox5->Size = System::Drawing::Size(579, 36);
 			this->groupBox5->TabIndex = 42;
 			this->groupBox5->TabStop = false;
@@ -494,9 +496,9 @@ namespace ProjetPOO {
 			this->groupBox6->Controls->Add(this->label6);
 			this->groupBox6->Controls->Add(this->textBox6);
 			this->groupBox6->Location = System::Drawing::Point(12, 327);
-			this->groupBox6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox6->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox6->Name = L"groupBox6";
-			this->groupBox6->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox6->Padding = System::Windows::Forms::Padding(4);
 			this->groupBox6->Size = System::Drawing::Size(579, 36);
 			this->groupBox6->TabIndex = 43;
 			this->groupBox6->TabStop = false;
@@ -524,9 +526,9 @@ namespace ProjetPOO {
 			this->groupBox7->Controls->Add(this->label7);
 			this->groupBox7->Controls->Add(this->textBox7);
 			this->groupBox7->Location = System::Drawing::Point(12, 362);
-			this->groupBox7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox7->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox7->Name = L"groupBox7";
-			this->groupBox7->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox7->Padding = System::Windows::Forms::Padding(4);
 			this->groupBox7->Size = System::Drawing::Size(579, 36);
 			this->groupBox7->TabIndex = 44;
 			this->groupBox7->TabStop = false;
@@ -554,9 +556,9 @@ namespace ProjetPOO {
 			this->groupBox8->Controls->Add(this->label8);
 			this->groupBox8->Controls->Add(this->textBox8);
 			this->groupBox8->Location = System::Drawing::Point(12, 396);
-			this->groupBox8->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox8->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox8->Name = L"groupBox8";
-			this->groupBox8->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox8->Padding = System::Windows::Forms::Padding(4);
 			this->groupBox8->Size = System::Drawing::Size(579, 36);
 			this->groupBox8->TabIndex = 45;
 			this->groupBox8->TabStop = false;
@@ -573,7 +575,6 @@ namespace ProjetPOO {
 			// 
 			// textBox8
 			// 
-
 			this->textBox8->Location = System::Drawing::Point(325, 9);
 			this->textBox8->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox8->Name = L"textBox8";
@@ -585,9 +586,9 @@ namespace ProjetPOO {
 			this->groupBox9->Controls->Add(this->label9);
 			this->groupBox9->Controls->Add(this->textBox9);
 			this->groupBox9->Location = System::Drawing::Point(12, 431);
-			this->groupBox9->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox9->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox9->Name = L"groupBox9";
-			this->groupBox9->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox9->Padding = System::Windows::Forms::Padding(4);
 			this->groupBox9->Size = System::Drawing::Size(579, 36);
 			this->groupBox9->TabIndex = 46;
 			this->groupBox9->TabStop = false;
@@ -615,9 +616,9 @@ namespace ProjetPOO {
 			this->groupBox10->Controls->Add(this->label10);
 			this->groupBox10->Controls->Add(this->textBox10);
 			this->groupBox10->Location = System::Drawing::Point(12, 465);
-			this->groupBox10->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox10->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox10->Name = L"groupBox10";
-			this->groupBox10->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox10->Padding = System::Windows::Forms::Padding(4);
 			this->groupBox10->Size = System::Drawing::Size(579, 36);
 			this->groupBox10->TabIndex = 47;
 			this->groupBox10->TabStop = false;
@@ -645,9 +646,9 @@ namespace ProjetPOO {
 			this->groupBox11->Controls->Add(this->label11);
 			this->groupBox11->Controls->Add(this->textBox11);
 			this->groupBox11->Location = System::Drawing::Point(12, 500);
-			this->groupBox11->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox11->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox11->Name = L"groupBox11";
-			this->groupBox11->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox11->Padding = System::Windows::Forms::Padding(4);
 			this->groupBox11->Size = System::Drawing::Size(579, 36);
 			this->groupBox11->TabIndex = 48;
 			this->groupBox11->TabStop = false;
@@ -675,9 +676,9 @@ namespace ProjetPOO {
 			this->groupBox12->Controls->Add(this->label12);
 			this->groupBox12->Controls->Add(this->textBox12);
 			this->groupBox12->Location = System::Drawing::Point(12, 534);
-			this->groupBox12->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox12->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox12->Name = L"groupBox12";
-			this->groupBox12->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox12->Padding = System::Windows::Forms::Padding(4);
 			this->groupBox12->Size = System::Drawing::Size(579, 36);
 			this->groupBox12->TabIndex = 49;
 			this->groupBox12->TabStop = false;
@@ -760,6 +761,7 @@ namespace ProjetPOO {
 			this->groupBox11->PerformLayout();
 			this->groupBox12->ResumeLayout(false);
 			this->groupBox12->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -789,14 +791,17 @@ private: System::Void personnel_CheckedChanged(System::Object^ sender, System::E
 
 	dataGridView1->Visible = true;
 
-	dataGridView1->ColumnCount = 6;
-	dataGridView1->Columns[0]->Name = "ID";
-	dataGridView1->Columns[1]->Name = "Nom";
-	dataGridView1->Columns[2]->Name = "Prénom";
-	dataGridView1->Columns[3]->Name = "Supérieur";
-	dataGridView1->Columns[4]->Name = "Date d'embauche";
-	dataGridView1->Columns[5]->Name = "Adresse";
-
+	System::Object^ data = dataGridView1->DataSource;
+	BindingSource^ bd = bindingSource1;
+	Object^ dbd = bindingSource1->DataSource;
+	String^ constr = "server=127.0.0.1;user id=root;persistsecurityinfo=True;database=projet_poo;port=3308";
+	MySqlConnection^ con = gcnew MySqlConnection(constr);
+	MySqlDataAdapter^ cmd = gcnew MySqlDataAdapter("SELECT personnel.nom as nom, personnel.prenom as prenom, adresse.adresse as adresse, date.date as dateembauche from((personnel inner join adresse on personnel.id_adresse = adresse.id) inner join date on personnel.ID_dateembauche = date.ID)", con);
+	DataTable^ dt = gcnew DataTable();
+	cmd->Fill(dt);
+	bindingSource1->DataSource = dt;
+	dataGridView1->DataSource = bindingSource1;
+	
 	label1->Text = "Nom :";
 	label2->Text = "Prénom :";
 	label3->Text = "Supérieur :";
@@ -825,15 +830,6 @@ private: System::Void client_CheckedChanged(System::Object^ sender, System::Even
 	groupBox12->Visible = false;
 
 	dataGridView1->Visible = true;
-
-	dataGridView1->ColumnCount = 7;
-	dataGridView1->Columns[0]->Name = "ID";
-	dataGridView1->Columns[1]->Name = "Nom";
-	dataGridView1->Columns[2]->Name = "Prénom";
-	dataGridView1->Columns[3]->Name = "Date de naissance";
-	dataGridView1->Columns[4]->Name = "Date de première commande";
-	dataGridView1->Columns[5]->Name = "Adresse facturation";
-	dataGridView1->Columns[6]->Name = "Adresse livraison";
 	
 	label1->Text = "Nom :";
 	label2->Text = "Prénom :";
@@ -899,17 +895,6 @@ private: System::Void stock_CheckedChanged(System::Object^ sender, System::Event
 
 	dataGridView1->Visible = true;
 
-	dataGridView1->ColumnCount = 9;
-	dataGridView1->Columns[0]->Name = "ID";
-	dataGridView1->Columns[1]->Name = "Nom";
-	dataGridView1->Columns[2]->Name = "Nature";
-	dataGridView1->Columns[3]->Name = "Couleur";
-	dataGridView1->Columns[4]->Name = "Quantité";
-	dataGridView1->Columns[5]->Name = "Seuil de réapprovisionnement";
-	dataGridView1->Columns[6]->Name = "Taux TVA";
-	dataGridView1->Columns[7]->Name = "Taille lot";
-	dataGridView1->Columns[8]->Name = "Prix";
-
 	label1->Text = "Nom article :";
 	label2->Text = "Nature :";
 	label3->Text = "Couleur :";
@@ -942,16 +927,6 @@ private: System::Void statistique_CheckedChanged(System::Object^ sender, System:
 
 	dataGridView1->Visible = true;
 
-	dataGridView1->ColumnCount = 9;
-	dataGridView1->Columns[0]->Name = "Panier moyen";
-	dataGridView1->Columns[1]->Name = "Chiffre d'affaire sur un mois choisi";
-	dataGridView1->Columns[2]->Name = "Produits sous le seuil de reapprovisionnement";
-	dataGridView1->Columns[3]->Name = "montant total des achats pour un client";
-	dataGridView1->Columns[4]->Name = "Les 10 articles les plus vendus";
-	dataGridView1->Columns[5]->Name = "Les 10 articles les moins vendus";
-	dataGridView1->Columns[6]->Name = "Valeur commerciale du stock";
-	dataGridView1->Columns[7]->Name = "Valeur d'achat du stock";
-	dataGridView1->Columns[8]->Name = "Variations de valeurs commerciales";
 
 	label1->Text = "Panier moyen (après remise) :";
 	label2->Text = "Chiffre d'affaire sur un mois choisi :";
@@ -992,16 +967,11 @@ private: System::Void afficher_Click(System::Object^ sender, System::EventArgs^ 
 }
 private: System::Void creer_Click(System::Object^ sender, System::EventArgs^ e) {
 	
-
-
 	if (personnel->Checked)
 	{
 		req.envoyer(ad.creer_adresse(textBox5->Text));
 		req.envoyer(ad.creer_date(textBox4->Text));
-		
-		String^ X = req.recuperer(ad.recup_id_adresse(textBox5->Text));
-
-		communication->Text = req.envoyer(pers.creer(X, textBox3->Text, textBox4->Text, textBox1->Text, textBox2->Text));
+		communication->Text = req.envoyer(pers.creer(textBox5->Text, textBox3->Text, textBox4->Text, textBox1->Text, textBox2->Text));
 	}
 	if (client->Checked)
 	{
@@ -1010,14 +980,7 @@ private: System::Void creer_Click(System::Object^ sender, System::EventArgs^ e) 
 		communication->Text = req.envoyer(ad.creer_date(textBox3->Text));
 		req.envoyer(ad.creer_date(textBox4->Text));
 
-		String^ Xfac = req.recuperer(ad.recup_id_adresse(textBox5->Text));
-		String^ Xliv = req.recuperer(ad.recup_id_adresse(textBox6->Text));
-
-		String^ Yanniv = req.recuperer(ad.recup_id_date(textBox3->Text));
-		String^ Yachat = req.recuperer(ad.recup_id_date(textBox4->Text));
-		
-		
-		req.envoyer(cli.creer(Xliv, Xfac, Yanniv, Yachat, textBox1->Text, textBox2->Text));
+		req.envoyer(cli.creer(textBox6->Text, textBox5->Text, textBox3->Text, textBox4->Text, textBox1->Text, textBox2->Text));
 	}
 	if (stock->Checked)
 	{
@@ -1051,8 +1014,13 @@ private: System::Void modifier_Click(System::Object^ sender, System::EventArgs^ 
 	
 	if (stock->Checked)
 	{
-		communication->Text = req.envoyer(art.modifier_article(textBox6->Text, textBox1->Text, textBox4->Text, textBox5->Text, textBoxID->Text, textBox2->Text, textBox3->Text));
+		req.envoyer(art.creer_tva(textBox6->Text));
+		req.envoyer(art.creer_nature(textBox2->Text));
+		req.envoyer(art.creer_couleur(textBox3->Text));
+		req.envoyer(art.modifier_article(textBox6->Text, textBox1->Text, textBox4->Text, textBox5->Text, textBoxID->Text, textBox2->Text, textBox3->Text));
 	}
+
+	
 }
 };
 }

@@ -1,5 +1,13 @@
 #include "requete.h"
 
+using namespace System;
+using namespace System::ComponentModel;
+using namespace System::Collections;
+using namespace System::Windows::Forms;
+using namespace System::Data;
+using namespace System::Drawing;
+using namespace MySql::Data::MySqlClient;
+
 String^ requete::recuperer(String^ instruction)
 {
 	try {
@@ -20,6 +28,19 @@ String^ requete::recuperer(String^ instruction)
 	catch (Exception^ ex) {
 		return ex->Message;
 	}
+}
+
+String^ requete::recuperer_table(String^ req)
+{
+	System::Object^ data = dataGridView1->DataSource;
+	BindingSource^ bd = bindingSource1;
+	Object^ dbd = bindingSource1->DataSource;
+	MySqlConnection^ con = gcnew MySqlConnection(cnx);
+	MySqlDataAdapter^ cmd = gcnew MySqlDataAdapter(req, con);
+	DataTable^ dt = gcnew DataTable();
+	cmd->Fill(dt);
+	bindingSource1->DataSource = dt;
+	dataGridView1->DataSource = bindingSource1;
 }
 
 String^ requete::envoyer(String^instruction)

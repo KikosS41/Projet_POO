@@ -9,7 +9,13 @@ public:
 	String^ afficher();
 	String^ modifier();
 	String^ supprimer(String^);
-	String^ recuperer_nom(String^);
-	String^ recuperer_prenom(String^);
+	String^ recuperer_idmax();
+	String^ recuperer_nom(int);
+	String^ recuperer_prenom(int);
+	String^ recuperer_sup(int);
+	String^ recuperer_date_emb(int);
+	String^ recuperer_adr(int);
+	String^ recuperer_tout();
+	
 };
 

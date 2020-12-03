@@ -1,8 +1,8 @@
 #include "CL_Client.h"
 
-String^ CL_Client::creer(String^ id_adr_liv, String^ id_adr_fac, String^ id_dat_ann, String^ id_dat_1er, String^ nom, String^ prenom)
+String^ CL_Client::creer(String^ adr_liv, String^ adr_fac, String^ dat_ann, String^ dat_1er, String^ nom, String^ prenom)
 {
-return "INSERT INTO CLIENT(ID_ADRESSELIVRAISON, ID_ADRESSEFACTURATION, ID_DATENAISSANCE, ID_DATE1ER, NOM, PRENOM) VALUES ('" + id_adr_liv + "', '" + id_adr_fac + "', '" + id_dat_ann + "', '" + id_dat_1er + "', '" + nom + "', '" + prenom + "')";
+return "INSERT INTO CLIENT(ID_ADRESSELIVRAISON, ID_ADRESSEFACTURATION, ID_DATENAISSANCE, ID_DATE1ER, NOM, PRENOM) VALUES ((SELECT ID from adresse WHERE adresse.ADRESSE = '" + adr_liv + "'), (SELECT ID from adresse WHERE adresse.ADRESSE = '" + adr_fac + "'), (SELECT ID FROM DATE Where DATE.DATE = '" + dat_ann + "'), (SELECT ID FROM DATE Where DATE.DATE = '" + dat_1er + "'), '" + nom + "', '" + prenom + "')";
 
 }
 
