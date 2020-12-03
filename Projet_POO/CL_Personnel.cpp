@@ -17,8 +17,7 @@ String^ CL_Personnel::modifier()
     // TODO: insérer une instruction return ici
 }
 
-String^ CL_Personnel::supprimer()
+String^ CL_Personnel::supprimer(String^ id)
 {
-    throw gcnew System::NotImplementedException();
-    // TODO: insérer une instruction return ici
+    return "DELETE FROM PERSONNEL WHERE ID_PERSONNEL = '"+id+"'";
 }

@@ -6,10 +6,9 @@ return "INSERT INTO CLIENT(ID_ADRESSELIVRAISON, ID_ADRESSEFACTURATION, ID_DATENA
 
 }
 
-String^ CL_Client::afficher()
+String^ CL_Client::afficher(String^)
 {
-    throw gcnew System::NotImplementedException();
-    // TODO: insérer une instruction return ici
+    return "SELECT ID_ARTICLE as NumArticle, NOM as Designation, QUANTITE_STOCK_ARTICLE as Stock, SEUIL_REAPPROVISIONEMENT as SeuilRea, PRIX_HT_ARTICLE as PrixHT, TAUX_TVA as TVA FROM ARTICLE, TVA WHERE TVA.ID_TVA = ARTICLE.ID_TVA";
 }
 
 String^ CL_Client::modifier()
@@ -18,8 +17,7 @@ String^ CL_Client::modifier()
     // TODO: insérer une instruction return ici
 }
 
-String^ CL_Client::supprimer()
+String^ CL_Client::supprimer(String^ id)
 {
-    throw gcnew System::NotImplementedException();
-    // TODO: insérer une instruction return ici
+    return "DELETE FROM CLIENT WHERE ID_CLIENT = '"+id+"'";
 }
