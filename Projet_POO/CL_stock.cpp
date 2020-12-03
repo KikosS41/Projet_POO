@@ -35,4 +35,9 @@ String^ CL_stock::supprimer(String^ id)
 {
 return "DELETE FROM ARTICLE WHERE ID_ARTICLE = '"+id+"'";
 }
+
+String^ CL_stock::recuperer_tout()
+{
+    return "SELECT article.ID as ID_Article, article.nom as nom, article.quantité as quantité_Stock, article.seuil_Reapprovisionement as Seuil_Reapprovisionement, couleur.nom as couleur, tva.TAUX_TVA as Taux_TVA, Nature.nom as Nature, tarif.prix as prix, tarif.taille_lots from((((article inner join couleur on article.id_couleur = couleur.id) inner join nature on article.ID_Nature = nature.ID)inner join TVA on article.ID_TVA = TVA.ID) inner join tarif on article.id_Tarif = tarif.ID)";
+}
     

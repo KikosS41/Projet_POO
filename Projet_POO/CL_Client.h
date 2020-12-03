@@ -5,8 +5,7 @@ ref class CL_Client
 {
 public:
 	String^ creer(String^, String^, String^, String^, String^, String^);
-	String^ afficher(String^);
-	String^ modifier(String^);
+	String^ modifier(String^, String^, String^, String^, String^, String^, String^);
 	String^ supprimer(String^);
 	String^ recuperer_nom(String^);
 	String^ recuperer_prenom(String^);

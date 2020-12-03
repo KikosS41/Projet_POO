@@ -768,6 +768,14 @@ namespace ProjetPOO {
 		}
 #pragma endregion
 	
+		requete req;
+		CL_Personnel pers;
+		CL_adresse_date ad;
+		CL_Client cli;
+		CL_stock art;
+		CL_commande com;
+		CL_Statistique stats;
+
 private: System::Void personnel_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 
 	creer->Visible = true;
@@ -934,17 +942,9 @@ private: System::Void statistique_CheckedChanged(System::Object^ sender, System:
 
 }
 
-	   requete req;
-	   CL_Personnel pers;
-	   CL_adresse_date ad;
-	   CL_Client cli;
-	   CL_stock art;
-	   CL_commande com;	
-	   CL_Statistique stats;
 
 private: System::Void afficher_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (statistique->Checked)
-	{
+	if (statistique->Checked){
 		textBox1->Text = req.recuperer(stats.panier_moyen());
 		textBox2->Text = req.recuperer(stats.chiffre_daffaire_sur_un_mois(textBox2->Text));
 		textBox3->Text = req.recuperer(stats.produit_sous_le_seuil_de_reaprovisionnement());
@@ -952,10 +952,14 @@ private: System::Void afficher_Click(System::Object^ sender, System::EventArgs^ 
 		textBox6->Text = req.recuperer(stats.top10_articles_les_plus_vendus());
 		textBox7->Text = req.recuperer(stats.top10_articles_les_moins_vendus());
 	}
+
 	if (client->Checked) {
 		textBox1->Text = req.recuperer(cli.recuperer_nom(textBoxID->Text));
 		textBox2->Text = req.recuperer(cli.recuperer_prenom(textBoxID->Text));
-
+		textBox3->Text = req.recuperer(cli.recuperer_date_de_naissance(textBoxID->Text));
+		textBox4->Text = req.recuperer(cli.recuperer_date_de_1er_commande(textBoxID->Text));
+		textBox5->Text = req.recuperer(cli.recuperer_adr_fac(textBoxID->Text));
+		textBox6->Text = req.recuperer(cli.recuperer_adr_liv(textBoxID->Text));
 	}
 }
 private: System::Void creer_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -964,15 +968,14 @@ private: System::Void creer_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		req.envoyer(ad.creer_adresse(textBox5->Text));
 		req.envoyer(ad.creer_date(textBox4->Text));
-		communication->Text = req.envoyer(pers.creer(textBox5->Text, textBox3->Text, textBox4->Text, textBox1->Text, textBox2->Text));
+		req.envoyer(pers.creer(textBox5->Text, textBox3->Text, textBox4->Text, textBox1->Text, textBox2->Text));
 	}
 	if (client->Checked)
 	{
 		req.envoyer(ad.creer_adresse(textBox5->Text));
 		req.envoyer(ad.creer_adresse(textBox6->Text));
-		communication->Text = req.envoyer(ad.creer_date(textBox3->Text));
+		req.envoyer(ad.creer_date(textBox3->Text));
 		req.envoyer(ad.creer_date(textBox4->Text));
-
 		req.envoyer(cli.creer(textBox6->Text, textBox5->Text, textBox3->Text, textBox4->Text, textBox1->Text, textBox2->Text));
 	}
 	if (stock->Checked)
@@ -981,7 +984,7 @@ private: System::Void creer_Click(System::Object^ sender, System::EventArgs^ e) 
 		req.envoyer(art.creer_nature(textBox2->Text));
 		req.envoyer(art.creer_couleur(textBox3->Text));
 		req.envoyer(art.creer_article(textBox6->Text, textBox1->Text, textBox4->Text, textBox5->Text,textBox2->Text,textBox3->Text));
-		communication->Text = req.envoyer(art.creer_tarif(textBox8->Text, textBox7->Text, textBox1->Text));
+		req.envoyer(art.creer_tarif(textBox8->Text, textBox7->Text, textBox1->Text));
 	}
 }
 private: System::Void supprimer_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1002,7 +1005,6 @@ private: System::Void supprimer_Click(System::Object^ sender, System::EventArgs^
 	}
 
 }
-
 private: System::Void modifier_Click(System::Object^ sender, System::EventArgs^ e) {
 	
 	if (stock->Checked)
@@ -1013,7 +1015,20 @@ private: System::Void modifier_Click(System::Object^ sender, System::EventArgs^ 
 		req.envoyer(art.modifier_article(textBox6->Text, textBox1->Text, textBox4->Text, textBox5->Text, textBoxID->Text, textBox2->Text, textBox3->Text));
 	}
 
-	
+	if (personnel->Checked) {
+		req.envoyer(ad.creer_adresse(textBox5->Text));
+		req.envoyer(ad.creer_date(textBox4->Text));
+		req.envoyer(pers.modifier(textBox5->Text, textBox3->Text, textBox4->Text, textBox1->Text, textBox2->Text, textBoxID->Text));
+	}
+
+	if (client->Checked)
+	{
+		req.envoyer(ad.creer_adresse(textBox5->Text));
+		req.envoyer(ad.creer_adresse(textBox6->Text));
+		req.envoyer(ad.creer_date(textBox3->Text));
+		req.envoyer(ad.creer_date(textBox4->Text));
+		req.envoyer(cli.modifier(textBox6->Text,textBox5->Text,textBox3->Text,textBox4->Text,textBox1->Text,textBox2->Text,textBoxID->Text));
+	}
 }
 };
 }

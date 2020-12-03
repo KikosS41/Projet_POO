@@ -10,9 +10,8 @@ public:
 	String^ creer_couleur(String^);
 	String^ creer_nature( String^);
 	String^ creer_tarif(String^, String^, String^);
-
 	String^ modifier_article(String^, String^, String^, String^, String^, String^, String^);
-
 	String^ supprimer(String^);
+	String^ recuperer_tout();
 };
 

@@ -6,9 +6,8 @@ ref class CL_Personnel
 
 public:
 	String^ creer(String^, String^, String^, String^, String^);
-	String^ modifier();
+	String^ modifier(String^, String^, String^, String^, String^, String^);
 	String^ supprimer(String^);
-	String^ recuperer_idmax();
 	String^ recuperer_nom(int);
 	String^ recuperer_prenom(int);
 	String^ recuperer_sup(int);
