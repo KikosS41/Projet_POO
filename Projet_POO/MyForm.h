@@ -1031,15 +1031,15 @@ private: System::Void statistique_CheckedChanged(System::Object^ sender, System:
 	groupBox11->Visible = false;
 	groupBox12->Visible = false;
 
-	dataGridView1->Visible = true;
+	dataGridView1->Visible = false;
 
 	// Dénomination des labels
 
 	label1->Text = "Panier moyen (après remise) :";
 	label2->Text = "Chiffre d'affaire sur un mois choisi :";
 	label3->Text = "Produits sous le seuil de reapprovisionnement :";
-	label4->Text = "Nom client :";
-	label5->Text = "Prenom client :";
+	label4->Text = "montant total des achats pour un client: Nom client :";
+	label5->Text = "									Prenom client :";
 	label6->Text = "Les 10 articles les plus vendus :";
 	label7->Text = "Les 10 articles les moins vendus :";
 	label8->Text = "Valeur commerciale du stock :";
@@ -1070,6 +1070,7 @@ private: System::Void afficher_Click(System::Object^ sender, System::EventArgs^ 
 		textBox2->Text = req.recuperer(stats.chiffre_daffaire_sur_un_mois(textBox2->Text));
 		textBox3->Text = req.recuperer(stats.produit_sous_le_seuil_de_reaprovisionnement());
 		textBox4->Text = req.recuperer(stats.montant_total_des_achats_pour_un_client(textBox4->Text, textBox5->Text));
+		textBox5->Text = "";
 		textBox6->Text = req.recuperer(stats.top10_articles_les_plus_vendus());
 		textBox7->Text = req.recuperer(stats.top10_articles_les_moins_vendus());
 		textBox8->Text = req.recuperer(stats.valeur_achat());

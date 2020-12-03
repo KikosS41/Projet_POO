@@ -19,7 +19,7 @@ String^ requete::recuperer(String^ instruction)
 
 	}
 	catch (Exception^ ex) {
-		return "La connextion a échouée.\r\n Erreur :" + ex->Message + "\r\n";
+		return "La connexion a échouée.\r\n Erreur :" + ex->Message + "\r\n";
 	}
 }
 

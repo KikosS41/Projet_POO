@@ -7,7 +7,7 @@ String^ CL_commande::ajouter1(String^ ID_DATELIVRAISON, String^ ID_DATEEMISSION,
 
 String^ CL_commande::ajouter2(String^ ID_COMMANDE, String^ID_ARTICLE, String^ QTT, String^TAUX_TVA)
 {
-    return"call prix("+ ID_COMMANDE +","+ ID_ARTICLE +","+ QTT +","+ TAUX_TVA +")";
+    return"call prix('"+ ID_COMMANDE +"','"+ ID_ARTICLE +"','"+ QTT +"','"+ TAUX_TVA +"')";
 }
 
 String^ CL_commande::supprimer1(String^ id)
