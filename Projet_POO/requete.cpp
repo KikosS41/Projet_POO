@@ -15,7 +15,7 @@ String^ requete::recuperer(String^ instruction)
 	}
 	con->Close();
 	dr->Close();
-	return "La connexion a réussie" + "\r\n";
+	return resultat;
 
 	}
 	catch (Exception^ ex) {
