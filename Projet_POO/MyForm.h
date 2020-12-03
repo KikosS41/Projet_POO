@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "requete.h"
 #include "CL_Personnel.h"
@@ -20,7 +20,7 @@ namespace ProjetPOO {
 	using namespace MySql::Data::MySqlClient;
 
 	/// <summary>
-	/// Description résumée de MyForm
+	/// Description rï¿½sumï¿½e de MyForm
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -35,7 +35,7 @@ namespace ProjetPOO {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisï¿½es.
 		/// </summary>
 		~MyForm()
 		{
@@ -55,46 +55,92 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::RadioButton^ stock;
 	private: System::Windows::Forms::RadioButton^ statistique;
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::Label^ label5;
+
+
+
+
 	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::TextBox^ textBox6;
-	private: System::Windows::Forms::TextBox^ textBox7;
-	private: System::Windows::Forms::TextBox^ textBox8;
-	private: System::Windows::Forms::TextBox^ textBox9;
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::Label^ label8;
-	private: System::Windows::Forms::Label^ label9;
+
+
+
+
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
-	private: System::Windows::Forms::Label^ label10;
-	private: System::Windows::Forms::TextBox^ textBox10;
+
+
 	private: System::Windows::Forms::TextBox^ communication;
-	private: System::Windows::Forms::Label^ label11;
-	private: System::Windows::Forms::TextBox^ textBox11;
-	private: System::Windows::Forms::Label^ label12;
-	private: System::Windows::Forms::TextBox^ textBox12;
+
+
+
+
 	private: System::Windows::Forms::Label^ labelID;
 	private: System::Windows::Forms::TextBox^ textBoxID;
+	private: System::Windows::Forms::GroupBox^ groupBoxID;
+	private: System::Windows::Forms::GroupBox^ groupBox1;
+	private: System::Windows::Forms::GroupBox^ groupBox2;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::TextBox^ textBox2;
+
+	private: System::Windows::Forms::GroupBox^ groupBox3;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::TextBox^ textBox3;
+
+	private: System::Windows::Forms::GroupBox^ groupBox4;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::TextBox^ textBox4;
+
+	private: System::Windows::Forms::GroupBox^ groupBox5;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::TextBox^ textBox5;
+
+	private: System::Windows::Forms::GroupBox^ groupBox6;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::TextBox^ textBox6;
+
+	private: System::Windows::Forms::GroupBox^ groupBox7;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::TextBox^ textBox7;
+
+	private: System::Windows::Forms::GroupBox^ groupBox8;
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::TextBox^ textBox8;
+
+	private: System::Windows::Forms::GroupBox^ groupBox9;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::TextBox^ textBox9;
+
+	private: System::Windows::Forms::GroupBox^ groupBox10;
+	private: System::Windows::Forms::Label^ label10;
+	private: System::Windows::Forms::TextBox^ textBox10;
+
+	private: System::Windows::Forms::GroupBox^ groupBox11;
+	private: System::Windows::Forms::Label^ label11;
+	private: System::Windows::Forms::TextBox^ textBox11;
+
+	private: System::Windows::Forms::GroupBox^ groupBox12;
+	private: System::Windows::Forms::Label^ label12;
+	private: System::Windows::Forms::TextBox^ textBox12;
+
 
 
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nï¿½cessaire au concepteur.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// Mï¿½thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mï¿½thode avec l'ï¿½diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -108,52 +154,80 @@ namespace ProjetPOO {
 			this->stock = (gcnew System::Windows::Forms::RadioButton());
 			this->statistique = (gcnew System::Windows::Forms::RadioButton());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
 			this->communication = (gcnew System::Windows::Forms::TextBox());
-			this->label11 = (gcnew System::Windows::Forms::Label());
-			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
-			this->label12 = (gcnew System::Windows::Forms::Label());
-			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
 			this->labelID = (gcnew System::Windows::Forms::Label());
 			this->textBoxID = (gcnew System::Windows::Forms::TextBox());
+			this->groupBoxID = (gcnew System::Windows::Forms::GroupBox());
+			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->groupBox5 = (gcnew System::Windows::Forms::GroupBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->groupBox6 = (gcnew System::Windows::Forms::GroupBox());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->groupBox7 = (gcnew System::Windows::Forms::GroupBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
+			this->groupBox8 = (gcnew System::Windows::Forms::GroupBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
+			this->groupBox9 = (gcnew System::Windows::Forms::GroupBox());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->groupBox10 = (gcnew System::Windows::Forms::GroupBox());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
+			this->groupBox11 = (gcnew System::Windows::Forms::GroupBox());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
+			this->groupBox12 = (gcnew System::Windows::Forms::GroupBox());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			this->groupBoxID->SuspendLayout();
+			this->groupBox1->SuspendLayout();
+			this->groupBox2->SuspendLayout();
+			this->groupBox3->SuspendLayout();
+			this->groupBox4->SuspendLayout();
+			this->groupBox5->SuspendLayout();
+			this->groupBox6->SuspendLayout();
+			this->groupBox7->SuspendLayout();
+			this->groupBox8->SuspendLayout();
+			this->groupBox9->SuspendLayout();
+			this->groupBox10->SuspendLayout();
+			this->groupBox11->SuspendLayout();
+			this->groupBox12->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// creer
 			// 
-			this->creer->Location = System::Drawing::Point(391, 44);
+			this->creer->Location = System::Drawing::Point(293, 36);
+			this->creer->Margin = System::Windows::Forms::Padding(2);
 			this->creer->Name = L"creer";
-			this->creer->Size = System::Drawing::Size(143, 29);
+			this->creer->Size = System::Drawing::Size(107, 24);
 			this->creer->TabIndex = 0;
-			this->creer->Text = L"Créer";
+			this->creer->Text = L"Crï¿½er";
 			this->creer->UseVisualStyleBackColor = true;
 			this->creer->Visible = false;
 			this->creer->Click += gcnew System::EventHandler(this, &MyForm::creer_Click);
 			// 
 			// modifier
 			// 
-			this->modifier->Location = System::Drawing::Point(391, 79);
+			this->modifier->Location = System::Drawing::Point(293, 64);
+			this->modifier->Margin = System::Windows::Forms::Padding(2);
 			this->modifier->Name = L"modifier";
-			this->modifier->Size = System::Drawing::Size(143, 29);
+			this->modifier->Size = System::Drawing::Size(107, 24);
 			this->modifier->TabIndex = 1;
 			this->modifier->Text = L"Modifier";
 			this->modifier->UseVisualStyleBackColor = true;
@@ -161,9 +235,10 @@ namespace ProjetPOO {
 			// 
 			// supprimer
 			// 
-			this->supprimer->Location = System::Drawing::Point(391, 114);
+			this->supprimer->Location = System::Drawing::Point(293, 93);
+			this->supprimer->Margin = System::Windows::Forms::Padding(2);
 			this->supprimer->Name = L"supprimer";
-			this->supprimer->Size = System::Drawing::Size(143, 29);
+			this->supprimer->Size = System::Drawing::Size(107, 24);
 			this->supprimer->TabIndex = 2;
 			this->supprimer->Text = L"Supprimer";
 			this->supprimer->UseVisualStyleBackColor = true;
@@ -171,9 +246,10 @@ namespace ProjetPOO {
 			// 
 			// afficher
 			// 
-			this->afficher->Location = System::Drawing::Point(391, 9);
+			this->afficher->Location = System::Drawing::Point(293, 7);
+			this->afficher->Margin = System::Windows::Forms::Padding(2);
 			this->afficher->Name = L"afficher";
-			this->afficher->Size = System::Drawing::Size(143, 29);
+			this->afficher->Size = System::Drawing::Size(107, 24);
 			this->afficher->TabIndex = 3;
 			this->afficher->Text = L"Afficher";
 			this->afficher->UseVisualStyleBackColor = true;
@@ -183,9 +259,10 @@ namespace ProjetPOO {
 			// personnel
 			// 
 			this->personnel->AutoSize = true;
-			this->personnel->Location = System::Drawing::Point(13, 13);
+			this->personnel->Location = System::Drawing::Point(10, 11);
+			this->personnel->Margin = System::Windows::Forms::Padding(2);
 			this->personnel->Name = L"personnel";
-			this->personnel->Size = System::Drawing::Size(100, 21);
+			this->personnel->Size = System::Drawing::Size(77, 17);
 			this->personnel->TabIndex = 4;
 			this->personnel->TabStop = true;
 			this->personnel->Text = L"Personnels";
@@ -195,9 +272,10 @@ namespace ProjetPOO {
 			// client
 			// 
 			this->client->AutoSize = true;
-			this->client->Location = System::Drawing::Point(12, 40);
+			this->client->Location = System::Drawing::Point(9, 32);
+			this->client->Margin = System::Windows::Forms::Padding(2);
 			this->client->Name = L"client";
-			this->client->Size = System::Drawing::Size(71, 21);
+			this->client->Size = System::Drawing::Size(56, 17);
 			this->client->TabIndex = 5;
 			this->client->TabStop = true;
 			this->client->Text = L"Clients";
@@ -207,9 +285,10 @@ namespace ProjetPOO {
 			// commande
 			// 
 			this->commande->AutoSize = true;
-			this->commande->Location = System::Drawing::Point(12, 67);
+			this->commande->Location = System::Drawing::Point(9, 54);
+			this->commande->Margin = System::Windows::Forms::Padding(2);
 			this->commande->Name = L"commande";
-			this->commande->Size = System::Drawing::Size(107, 21);
+			this->commande->Size = System::Drawing::Size(83, 17);
 			this->commande->TabIndex = 6;
 			this->commande->TabStop = true;
 			this->commande->Text = L"Commandes";
@@ -219,9 +298,10 @@ namespace ProjetPOO {
 			// stock
 			// 
 			this->stock->AutoSize = true;
-			this->stock->Location = System::Drawing::Point(12, 94);
+			this->stock->Location = System::Drawing::Point(9, 76);
+			this->stock->Margin = System::Windows::Forms::Padding(2);
 			this->stock->Name = L"stock";
-			this->stock->Size = System::Drawing::Size(71, 21);
+			this->stock->Size = System::Drawing::Size(58, 17);
 			this->stock->TabIndex = 7;
 			this->stock->TabStop = true;
 			this->stock->Text = L"Stocks";
@@ -231,9 +311,10 @@ namespace ProjetPOO {
 			// statistique
 			// 
 			this->statistique->AutoSize = true;
-			this->statistique->Location = System::Drawing::Point(12, 121);
+			this->statistique->Location = System::Drawing::Point(9, 98);
+			this->statistique->Margin = System::Windows::Forms::Padding(2);
 			this->statistique->Name = L"statistique";
-			this->statistique->Size = System::Drawing::Size(102, 21);
+			this->statistique->Size = System::Drawing::Size(79, 17);
 			this->statistique->TabIndex = 8;
 			this->statistique->TabStop = true;
 			this->statistique->Text = L"Statistiques";
@@ -243,291 +324,423 @@ namespace ProjetPOO {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(12, 169);
+			this->label1->Location = System::Drawing::Point(2, 10);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(46, 17);
+			this->label1->Size = System::Drawing::Size(35, 13);
 			this->label1->TabIndex = 9;
 			this->label1->Text = L"label1";
-			this->label1->Visible = false;
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(12, 197);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(46, 17);
-			this->label2->TabIndex = 10;
-			this->label2->Text = L"label2";
-			this->label2->Visible = false;
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(12, 226);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(46, 17);
-			this->label3->TabIndex = 11;
-			this->label3->Text = L"label3";
-			this->label3->Visible = false;
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(12, 254);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(46, 17);
-			this->label4->TabIndex = 12;
-			this->label4->Text = L"label4";
-			this->label4->Visible = false;
-			// 
-			// label5
-			// 
-			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(12, 282);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(46, 17);
-			this->label5->TabIndex = 13;
-			this->label5->Text = L"label5";
-			this->label5->Visible = false;
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(338, 166);
+			this->textBox1->Location = System::Drawing::Point(244, 7);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(251, 22);
+			this->textBox1->Size = System::Drawing::Size(189, 20);
 			this->textBox1->TabIndex = 14;
-			this->textBox1->Visible = false;
-			// 
-			// textBox2
-			// 
-			this->textBox2->Location = System::Drawing::Point(338, 194);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(251, 22);
-			this->textBox2->TabIndex = 15;
-			this->textBox2->Visible = false;
-			// 
-			// textBox3
-			// 
-			this->textBox3->Location = System::Drawing::Point(338, 223);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(251, 22);
-			this->textBox3->TabIndex = 16;
-			this->textBox3->Visible = false;
-			// 
-			// textBox4
-			// 
-			this->textBox4->Location = System::Drawing::Point(338, 251);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(251, 22);
-			this->textBox4->TabIndex = 17;
-			this->textBox4->Visible = false;
-			// 
-			// textBox5
-			// 
-			this->textBox5->Location = System::Drawing::Point(338, 279);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(251, 22);
-			this->textBox5->TabIndex = 18;
-			this->textBox5->Visible = false;
-			// 
-			// textBox6
-			// 
-			this->textBox6->Location = System::Drawing::Point(338, 308);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(251, 22);
-			this->textBox6->TabIndex = 19;
-			this->textBox6->Visible = false;
-			// 
-			// textBox7
-			// 
-			this->textBox7->Location = System::Drawing::Point(338, 337);
-			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(251, 22);
-			this->textBox7->TabIndex = 20;
-			this->textBox7->Visible = false;
-			// 
-			// textBox8
-			// 
-			this->textBox8->Location = System::Drawing::Point(338, 366);
-			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(251, 22);
-			this->textBox8->TabIndex = 21;
-			this->textBox8->Visible = false;
-			// 
-			// textBox9
-			// 
-			this->textBox9->Location = System::Drawing::Point(338, 395);
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(251, 22);
-			this->textBox9->TabIndex = 22;
-			this->textBox9->Visible = false;
-			// 
-			// label6
-			// 
-			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(12, 311);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(46, 17);
-			this->label6->TabIndex = 23;
-			this->label6->Text = L"label6";
-			this->label6->Visible = false;
-			// 
-			// label7
-			// 
-			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(12, 340);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(46, 17);
-			this->label7->TabIndex = 24;
-			this->label7->Text = L"label7";
-			this->label7->Visible = false;
-			// 
-			// label8
-			// 
-			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(12, 369);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(46, 17);
-			this->label8->TabIndex = 25;
-			this->label8->Text = L"label8";
-			this->label8->Visible = false;
-			// 
-			// label9
-			// 
-			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(12, 398);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(46, 17);
-			this->label9->TabIndex = 26;
-			this->label9->Text = L"label9";
-			this->label9->Visible = false;
 			// 
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(630, 166);
+			this->dataGridView1->Location = System::Drawing::Point(472, 135);
+			this->dataGridView1->Margin = System::Windows::Forms::Padding(2);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(449, 334);
+			this->dataGridView1->Size = System::Drawing::Size(337, 326);
 			this->dataGridView1->TabIndex = 27;
 			this->dataGridView1->Visible = false;
 			// 
-			// label10
-			// 
-			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(12, 425);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(54, 17);
-			this->label10->TabIndex = 28;
-			this->label10->Text = L"label10";
-			this->label10->Visible = false;
-			// 
-			// textBox10
-			// 
-			this->textBox10->Location = System::Drawing::Point(338, 422);
-			this->textBox10->Name = L"textBox10";
-			this->textBox10->Size = System::Drawing::Size(251, 22);
-			this->textBox10->TabIndex = 29;
-			this->textBox10->Visible = false;
-			// 
 			// communication
 			// 
-			this->communication->Location = System::Drawing::Point(801, 13);
+			this->communication->Location = System::Drawing::Point(601, 11);
+			this->communication->Margin = System::Windows::Forms::Padding(2);
 			this->communication->Multiline = true;
 			this->communication->Name = L"communication";
 			this->communication->ReadOnly = true;
-			this->communication->Size = System::Drawing::Size(278, 130);
+			this->communication->Size = System::Drawing::Size(210, 106);
 			this->communication->TabIndex = 30;
-			// 
-			// label11
-			// 
-			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(12, 453);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(54, 17);
-			this->label11->TabIndex = 31;
-			this->label11->Text = L"label11";
-			this->label11->Visible = false;
-			// 
-			// textBox11
-			// 
-			this->textBox11->Location = System::Drawing::Point(338, 450);
-			this->textBox11->Name = L"textBox11";
-			this->textBox11->Size = System::Drawing::Size(251, 22);
-			this->textBox11->TabIndex = 32;
-			this->textBox11->Visible = false;
-			// 
-			// label12
-			// 
-			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(12, 481);
-			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(54, 17);
-			this->label12->TabIndex = 33;
-			this->label12->Text = L"label12";
-			this->label12->Visible = false;
-			// 
-			// textBox12
-			// 
-			this->textBox12->Location = System::Drawing::Point(338, 478);
-			this->textBox12->Name = L"textBox12";
-			this->textBox12->Size = System::Drawing::Size(251, 22);
-			this->textBox12->TabIndex = 34;
-			this->textBox12->Visible = false;
 			// 
 			// labelID
 			// 
 			this->labelID->AutoSize = true;
-			this->labelID->Location = System::Drawing::Point(627, 84);
+			this->labelID->Location = System::Drawing::Point(3, 10);
+			this->labelID->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->labelID->Name = L"labelID";
-			this->labelID->Size = System::Drawing::Size(29, 17);
+			this->labelID->Size = System::Drawing::Size(24, 13);
 			this->labelID->TabIndex = 35;
 			this->labelID->Text = L"ID :";
-			this->labelID->Visible = false;
 			// 
 			// textBoxID
 			// 
-			this->textBoxID->Location = System::Drawing::Point(662, 82);
+			this->textBoxID->Location = System::Drawing::Point(31, 7);
+			this->textBoxID->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxID->Name = L"textBoxID";
-			this->textBoxID->Size = System::Drawing::Size(62, 22);
+			this->textBoxID->Size = System::Drawing::Size(48, 20);
 			this->textBoxID->TabIndex = 36;
-			this->textBoxID->Visible = false;
+			// 
+			// groupBoxID
+			// 
+			this->groupBoxID->Controls->Add(this->labelID);
+			this->groupBoxID->Controls->Add(this->textBoxID);
+			this->groupBoxID->Location = System::Drawing::Point(472, 58);
+			this->groupBoxID->Name = L"groupBoxID";
+			this->groupBoxID->Size = System::Drawing::Size(80, 29);
+			this->groupBoxID->TabIndex = 37;
+			this->groupBoxID->TabStop = false;
+			this->groupBoxID->Visible = false;
+			// 
+			// groupBox1
+			// 
+			this->groupBox1->Controls->Add(this->label1);
+			this->groupBox1->Controls->Add(this->textBox1);
+			this->groupBox1->Location = System::Drawing::Point(9, 126);
+			this->groupBox1->Name = L"groupBox1";
+			this->groupBox1->Size = System::Drawing::Size(434, 29);
+			this->groupBox1->TabIndex = 38;
+			this->groupBox1->TabStop = false;
+			this->groupBox1->Visible = false;
+			// 
+			// groupBox2
+			// 
+			this->groupBox2->Controls->Add(this->label2);
+			this->groupBox2->Controls->Add(this->textBox2);
+			this->groupBox2->Location = System::Drawing::Point(9, 154);
+			this->groupBox2->Name = L"groupBox2";
+			this->groupBox2->Size = System::Drawing::Size(434, 29);
+			this->groupBox2->TabIndex = 39;
+			this->groupBox2->TabStop = false;
+			this->groupBox2->Visible = false;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(2, 10);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(35, 13);
+			this->label2->TabIndex = 9;
+			this->label2->Text = L"label2";
+			// 
+			// textBox2
+			// 
+			this->textBox2->Location = System::Drawing::Point(244, 7);
+			this->textBox2->Margin = System::Windows::Forms::Padding(2);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(189, 20);
+			this->textBox2->TabIndex = 14;
+			// 
+			// groupBox3
+			// 
+			this->groupBox3->Controls->Add(this->label3);
+			this->groupBox3->Controls->Add(this->textBox3);
+			this->groupBox3->Location = System::Drawing::Point(9, 182);
+			this->groupBox3->Name = L"groupBox3";
+			this->groupBox3->Size = System::Drawing::Size(434, 29);
+			this->groupBox3->TabIndex = 40;
+			this->groupBox3->TabStop = false;
+			this->groupBox3->Visible = false;
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(2, 10);
+			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(35, 13);
+			this->label3->TabIndex = 9;
+			this->label3->Text = L"label3";
+			// 
+			// textBox3
+			// 
+			this->textBox3->Location = System::Drawing::Point(244, 7);
+			this->textBox3->Margin = System::Windows::Forms::Padding(2);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(189, 20);
+			this->textBox3->TabIndex = 14;
+			// 
+			// groupBox4
+			// 
+			this->groupBox4->Controls->Add(this->label4);
+			this->groupBox4->Controls->Add(this->textBox4);
+			this->groupBox4->Location = System::Drawing::Point(9, 210);
+			this->groupBox4->Name = L"groupBox4";
+			this->groupBox4->Size = System::Drawing::Size(434, 29);
+			this->groupBox4->TabIndex = 41;
+			this->groupBox4->TabStop = false;
+			this->groupBox4->Visible = false;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(2, 10);
+			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(35, 13);
+			this->label4->TabIndex = 9;
+			this->label4->Text = L"label4";
+			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(244, 7);
+			this->textBox4->Margin = System::Windows::Forms::Padding(2);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(189, 20);
+			this->textBox4->TabIndex = 14;
+			// 
+			// groupBox5
+			// 
+			this->groupBox5->Controls->Add(this->label5);
+			this->groupBox5->Controls->Add(this->textBox5);
+			this->groupBox5->Location = System::Drawing::Point(9, 238);
+			this->groupBox5->Name = L"groupBox5";
+			this->groupBox5->Size = System::Drawing::Size(434, 29);
+			this->groupBox5->TabIndex = 42;
+			this->groupBox5->TabStop = false;
+			this->groupBox5->Visible = false;
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(2, 10);
+			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(35, 13);
+			this->label5->TabIndex = 9;
+			this->label5->Text = L"label5";
+			// 
+			// textBox5
+			// 
+			this->textBox5->Location = System::Drawing::Point(244, 7);
+			this->textBox5->Margin = System::Windows::Forms::Padding(2);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(189, 20);
+			this->textBox5->TabIndex = 14;
+			// 
+			// groupBox6
+			// 
+			this->groupBox6->Controls->Add(this->label6);
+			this->groupBox6->Controls->Add(this->textBox6);
+			this->groupBox6->Location = System::Drawing::Point(9, 266);
+			this->groupBox6->Name = L"groupBox6";
+			this->groupBox6->Size = System::Drawing::Size(434, 29);
+			this->groupBox6->TabIndex = 43;
+			this->groupBox6->TabStop = false;
+			this->groupBox6->Visible = false;
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(2, 10);
+			this->label6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(35, 13);
+			this->label6->TabIndex = 9;
+			this->label6->Text = L"label6";
+			// 
+			// textBox6
+			// 
+			this->textBox6->Location = System::Drawing::Point(244, 7);
+			this->textBox6->Margin = System::Windows::Forms::Padding(2);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(189, 20);
+			this->textBox6->TabIndex = 14;
+			// 
+			// groupBox7
+			// 
+			this->groupBox7->Controls->Add(this->label7);
+			this->groupBox7->Controls->Add(this->textBox7);
+			this->groupBox7->Location = System::Drawing::Point(9, 294);
+			this->groupBox7->Name = L"groupBox7";
+			this->groupBox7->Size = System::Drawing::Size(434, 29);
+			this->groupBox7->TabIndex = 44;
+			this->groupBox7->TabStop = false;
+			this->groupBox7->Visible = false;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(2, 10);
+			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(35, 13);
+			this->label7->TabIndex = 9;
+			this->label7->Text = L"label7";
+			// 
+			// textBox7
+			// 
+			this->textBox7->Location = System::Drawing::Point(244, 7);
+			this->textBox7->Margin = System::Windows::Forms::Padding(2);
+			this->textBox7->Name = L"textBox7";
+			this->textBox7->Size = System::Drawing::Size(189, 20);
+			this->textBox7->TabIndex = 14;
+			// 
+			// groupBox8
+			// 
+			this->groupBox8->Controls->Add(this->label8);
+			this->groupBox8->Controls->Add(this->textBox8);
+			this->groupBox8->Location = System::Drawing::Point(9, 322);
+			this->groupBox8->Name = L"groupBox8";
+			this->groupBox8->Size = System::Drawing::Size(434, 29);
+			this->groupBox8->TabIndex = 45;
+			this->groupBox8->TabStop = false;
+			this->groupBox8->Visible = false;
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(2, 10);
+			this->label8->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(35, 13);
+			this->label8->TabIndex = 9;
+			this->label8->Text = L"label8";
+			// 
+			// textBox8
+			// 
+			this->textBox8->Location = System::Drawing::Point(244, 7);
+			this->textBox8->Margin = System::Windows::Forms::Padding(2);
+			this->textBox8->Name = L"textBox8";
+			this->textBox8->Size = System::Drawing::Size(189, 20);
+			this->textBox8->TabIndex = 14;
+			// 
+			// groupBox9
+			// 
+			this->groupBox9->Controls->Add(this->label9);
+			this->groupBox9->Controls->Add(this->textBox9);
+			this->groupBox9->Location = System::Drawing::Point(9, 350);
+			this->groupBox9->Name = L"groupBox9";
+			this->groupBox9->Size = System::Drawing::Size(434, 29);
+			this->groupBox9->TabIndex = 46;
+			this->groupBox9->TabStop = false;
+			this->groupBox9->Visible = false;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(2, 10);
+			this->label9->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(35, 13);
+			this->label9->TabIndex = 9;
+			this->label9->Text = L"label9";
+			// 
+			// textBox9
+			// 
+			this->textBox9->Location = System::Drawing::Point(244, 7);
+			this->textBox9->Margin = System::Windows::Forms::Padding(2);
+			this->textBox9->Name = L"textBox9";
+			this->textBox9->Size = System::Drawing::Size(189, 20);
+			this->textBox9->TabIndex = 14;
+			// 
+			// groupBox10
+			// 
+			this->groupBox10->Controls->Add(this->label10);
+			this->groupBox10->Controls->Add(this->textBox10);
+			this->groupBox10->Location = System::Drawing::Point(9, 378);
+			this->groupBox10->Name = L"groupBox10";
+			this->groupBox10->Size = System::Drawing::Size(434, 29);
+			this->groupBox10->TabIndex = 47;
+			this->groupBox10->TabStop = false;
+			this->groupBox10->Visible = false;
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(2, 10);
+			this->label10->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(41, 13);
+			this->label10->TabIndex = 9;
+			this->label10->Text = L"label10";
+			// 
+			// textBox10
+			// 
+			this->textBox10->Location = System::Drawing::Point(244, 7);
+			this->textBox10->Margin = System::Windows::Forms::Padding(2);
+			this->textBox10->Name = L"textBox10";
+			this->textBox10->Size = System::Drawing::Size(189, 20);
+			this->textBox10->TabIndex = 14;
+			// 
+			// groupBox11
+			// 
+			this->groupBox11->Controls->Add(this->label11);
+			this->groupBox11->Controls->Add(this->textBox11);
+			this->groupBox11->Location = System::Drawing::Point(9, 406);
+			this->groupBox11->Name = L"groupBox11";
+			this->groupBox11->Size = System::Drawing::Size(434, 29);
+			this->groupBox11->TabIndex = 48;
+			this->groupBox11->TabStop = false;
+			this->groupBox11->Visible = false;
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(2, 10);
+			this->label11->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(41, 13);
+			this->label11->TabIndex = 9;
+			this->label11->Text = L"label11";
+			// 
+			// textBox11
+			// 
+			this->textBox11->Location = System::Drawing::Point(244, 7);
+			this->textBox11->Margin = System::Windows::Forms::Padding(2);
+			this->textBox11->Name = L"textBox11";
+			this->textBox11->Size = System::Drawing::Size(189, 20);
+			this->textBox11->TabIndex = 14;
+			// 
+			// groupBox12
+			// 
+			this->groupBox12->Controls->Add(this->label12);
+			this->groupBox12->Controls->Add(this->textBox12);
+			this->groupBox12->Location = System::Drawing::Point(9, 434);
+			this->groupBox12->Name = L"groupBox12";
+			this->groupBox12->Size = System::Drawing::Size(434, 29);
+			this->groupBox12->TabIndex = 49;
+			this->groupBox12->TabStop = false;
+			this->groupBox12->Visible = false;
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Location = System::Drawing::Point(2, 10);
+			this->label12->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(41, 13);
+			this->label12->TabIndex = 9;
+			this->label12->Text = L"label12";
+			// 
+			// textBox12
+			// 
+			this->textBox12->Location = System::Drawing::Point(244, 7);
+			this->textBox12->Margin = System::Windows::Forms::Padding(2);
+			this->textBox12->Name = L"textBox12";
+			this->textBox12->Size = System::Drawing::Size(189, 20);
+			this->textBox12->TabIndex = 14;
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoScroll = true;
-			this->ClientSize = System::Drawing::Size(1091, 541);
-			this->Controls->Add(this->textBoxID);
-			this->Controls->Add(this->labelID);
-			this->Controls->Add(this->textBox12);
-			this->Controls->Add(this->label12);
-			this->Controls->Add(this->textBox11);
-			this->Controls->Add(this->label11);
+			this->ClientSize = System::Drawing::Size(818, 470);
+			this->Controls->Add(this->groupBox12);
+			this->Controls->Add(this->groupBox11);
+			this->Controls->Add(this->groupBox10);
+			this->Controls->Add(this->groupBox9);
+			this->Controls->Add(this->groupBox8);
+			this->Controls->Add(this->groupBox7);
+			this->Controls->Add(this->groupBox6);
+			this->Controls->Add(this->groupBox5);
+			this->Controls->Add(this->groupBox4);
+			this->Controls->Add(this->groupBox3);
+			this->Controls->Add(this->groupBox2);
+			this->Controls->Add(this->groupBox1);
+			this->Controls->Add(this->groupBoxID);
 			this->Controls->Add(this->communication);
-			this->Controls->Add(this->textBox10);
-			this->Controls->Add(this->label10);
 			this->Controls->Add(this->dataGridView1);
-			this->Controls->Add(this->label9);
-			this->Controls->Add(this->label8);
-			this->Controls->Add(this->label7);
-			this->Controls->Add(this->label6);
-			this->Controls->Add(this->textBox9);
-			this->Controls->Add(this->textBox8);
-			this->Controls->Add(this->textBox7);
-			this->Controls->Add(this->textBox6);
-			this->Controls->Add(this->textBox5);
-			this->Controls->Add(this->textBox4);
-			this->Controls->Add(this->textBox3);
-			this->Controls->Add(this->textBox2);
-			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->label5);
-			this->Controls->Add(this->label4);
-			this->Controls->Add(this->label3);
-			this->Controls->Add(this->label2);
-			this->Controls->Add(this->label1);
 			this->Controls->Add(this->statistique);
 			this->Controls->Add(this->stock);
 			this->Controls->Add(this->commande);
@@ -537,9 +750,36 @@ namespace ProjetPOO {
 			this->Controls->Add(this->supprimer);
 			this->Controls->Add(this->modifier);
 			this->Controls->Add(this->creer);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			this->groupBoxID->ResumeLayout(false);
+			this->groupBoxID->PerformLayout();
+			this->groupBox1->ResumeLayout(false);
+			this->groupBox1->PerformLayout();
+			this->groupBox2->ResumeLayout(false);
+			this->groupBox2->PerformLayout();
+			this->groupBox3->ResumeLayout(false);
+			this->groupBox3->PerformLayout();
+			this->groupBox4->ResumeLayout(false);
+			this->groupBox4->PerformLayout();
+			this->groupBox5->ResumeLayout(false);
+			this->groupBox5->PerformLayout();
+			this->groupBox6->ResumeLayout(false);
+			this->groupBox6->PerformLayout();
+			this->groupBox7->ResumeLayout(false);
+			this->groupBox7->PerformLayout();
+			this->groupBox8->ResumeLayout(false);
+			this->groupBox8->PerformLayout();
+			this->groupBox9->ResumeLayout(false);
+			this->groupBox9->PerformLayout();
+			this->groupBox10->ResumeLayout(false);
+			this->groupBox10->PerformLayout();
+			this->groupBox11->ResumeLayout(false);
+			this->groupBox11->PerformLayout();
+			this->groupBox12->ResumeLayout(false);
+			this->groupBox12->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -565,7 +805,6 @@ private: System::Void personnel_CheckedChanged(System::Object^ sender, System::E
 	label10->Visible = false;
 	label11->Visible = false;
 	label12->Visible = false;
-	labelID->Visible = true;
 
 	textBox1->Visible = true;
 	textBox2->Visible = true;
@@ -579,13 +818,12 @@ private: System::Void personnel_CheckedChanged(System::Object^ sender, System::E
 	textBox10->Visible = false;
 	textBox11->Visible = false;
 	textBox12->Visible = false;
-	textBoxID->Visible = true;
 
 	dataGridView1->Visible = true;
 
 	label1->Text = "Nom :";
-	label2->Text = "Prénom :";
-	label3->Text = "Supérieur :";
+	label2->Text = "Prï¿½nom :";
+	label3->Text = "Supï¿½rieur :";
 	label4->Text = "Date d'embauche (YYYY-MM-DD) :";
 	label5->Text = "Adresse :";
 }
@@ -596,40 +834,26 @@ private: System::Void client_CheckedChanged(System::Object^ sender, System::Even
 	supprimer->Visible = true;
 	afficher->Visible = true;
 
-	label1->Visible = true;
-	label2->Visible = true;
-	label3->Visible = true;
-	label4->Visible = true;
-	label5->Visible = true;
-	label6->Visible = true;
-	label7->Visible = false;
-	label8->Visible = false;
-	label9->Visible = false;
-	label10->Visible = false;
-	label11->Visible = false;
-	label12->Visible = false;
-	labelID->Visible = true;
-
-	textBox1->Visible = true;
-	textBox2->Visible = true;
-	textBox3->Visible = true;
-	textBox4->Visible = true;
-	textBox5->Visible = true;
-	textBox6->Visible = true;
-	textBox7->Visible = false;
-	textBox8->Visible = false;
-	textBox9->Visible = false;
-	textBox10->Visible = false;
-	textBox11->Visible = false;
-	textBox12->Visible = false;
-	textBoxID->Visible = true;
+	groupBoxID->Visible = true;
+	groupBox1->Visible = true;
+	groupBox2->Visible = true;
+	groupBox3->Visible = true;
+	groupBox4->Visible = true;
+	groupBox5->Visible = true;
+	groupBox6->Visible = true;
+	groupBox7->Visible = false;
+	groupBox8->Visible = false;
+	groupBox9->Visible = false;
+	groupBox10->Visible = false;
+	groupBox11->Visible = false;
+	groupBox12->Visible = false;
 
 	dataGridView1->Visible = true;
 	
 	label1->Text = "Nom :";
-	label2->Text = "Prénom :";
+	label2->Text = "Prï¿½nom :";
 	label3->Text = "Date de naissance :";
-	label4->Text = "Date de première commande :";
+	label4->Text = "Date de premiï¿½re commande :";
 	label5->Text = "Adresse facturation:";
 	label6->Text = "Adresse livraison :";
 
@@ -652,7 +876,7 @@ private: System::Void commande_CheckedChanged(System::Object^ sender, System::Ev
 	label10->Visible = true;
 	label11->Visible = false;
 	label12->Visible = false;
-	labelID->Visible = true;
+	labelID->Visible = false;
 
 	textBox1->Visible = true;
 	textBox2->Visible = true;
@@ -670,12 +894,12 @@ private: System::Void commande_CheckedChanged(System::Object^ sender, System::Ev
 
 	dataGridView1->Visible = false;
 
-	label1->Text = "Référence :";
-	label2->Text = "Date de livraison prévue :";
-	label3->Text = "Date d'émission :";
+	label1->Text = "Rï¿½fï¿½rence :";
+	label2->Text = "Date de livraison prï¿½vue :";
+	label3->Text = "Date d'ï¿½mission :";
 	label4->Text = "Date de paiement :";
 	label5->Text = "Moyen de paiement :";
-	label6->Text = "Date du réglement de solde :";
+	label6->Text = "Date du rï¿½glement de solde :";
 	label7->Text = "Prix (la resime se fait auto) par article :";
 	label8->Text = "Prix HT :";
 	label9->Text = "Prix TTC :";
@@ -688,41 +912,27 @@ private: System::Void stock_CheckedChanged(System::Object^ sender, System::Event
 	supprimer->Visible = true;
 	afficher->Visible = true;
 
-	label1->Visible = true;
-	label2->Visible = true;
-	label3->Visible = true;
-	label4->Visible = true;
-	label5->Visible = true;
-	label6->Visible = true;
-	label7->Visible = true;
-	label8->Visible = true;
-	label9->Visible = false;
-	label10->Visible = false;
-	label11->Visible = false;
-	label12->Visible = false;
-	labelID->Visible = true;
-
-	textBox1->Visible = true;
-	textBox2->Visible = true;
-	textBox3->Visible = true;
-	textBox4->Visible = true;
-	textBox5->Visible = true;
-	textBox6->Visible = true;
-	textBox7->Visible = true;
-	textBox8->Visible = true;
-	textBox9->Visible = false;
-	textBox10->Visible = false;
-	textBox11->Visible = false;
-	textBox12->Visible = false;
-	textBoxID->Visible = true;
+	groupBoxID->Visible = true;
+	groupBox1->Visible = true;
+	groupBox2->Visible = true;
+	groupBox3->Visible = true;
+	groupBox4->Visible = true;
+	groupBox5->Visible = true;
+	groupBox6->Visible = true;
+	groupBox7->Visible = true;
+	groupBox8->Visible = true;
+	groupBox9->Visible = false;
+	groupBox10->Visible = false;
+	groupBox11->Visible = false;
+	groupBox12->Visible = false;
 
 	dataGridView1->Visible = false;
 
 	label1->Text = "Prix HT :";
-	label2->Text = "Référence :";
-	label3->Text = "Désignation :";
-	label4->Text = "Quantité :";
-	label5->Text = "Seuil de réapprovisionnement :";
+	label2->Text = "Rï¿½fï¿½rence :";
+	label3->Text = "Dï¿½signation :";
+	label4->Text = "Quantitï¿½ :";
+	label5->Text = "Seuil de rï¿½approvisionnement :";
 	label6->Text = "Taux TVA :";
 	label7->Text = "Nature :";
 	label8->Text = "Couleur :";
@@ -760,19 +970,19 @@ private: System::Void statistique_CheckedChanged(System::Object^ sender, System:
 	textBox10->Visible = true;
 	textBox11->Visible = false;
 	textBox12->Visible = false;
-	textBoxID->Visible = false;	
+	textBoxID->Visible = false;
 
 	dataGridView1->Visible = true;
 
-	label1->Text = "Panier moyen (après remise) :";
+	label1->Text = "Panier moyen (aprï¿½s remise) :";
 	label2->Text = "Chiffre d'affaire sur un mois choisi :";
-	label3->Text = "Produits sous le seuil de réapprovisionnement :";
+	label3->Text = "Produits sous le seuil de rï¿½approvisionnement :";
 	label4->Text = "Nom client :";
 	label5->Text = "Prenom client :";
 	label6->Text = "Les 10 articles les plus vendus :";
 	label7->Text = "Les 10 articles les moins vendus :";
 	label8->Text = "Valeur commerciale du stock :";
-	label9->Text = "Valeur d’achat du stock :";
+	label9->Text = "Valeur dï¿½achat du stock :";
 	label10->Text = "Variations de valeurs commerciales :";
 
 }
