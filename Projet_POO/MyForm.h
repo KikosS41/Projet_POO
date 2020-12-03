@@ -565,6 +565,7 @@ private: System::Void personnel_CheckedChanged(System::Object^ sender, System::E
 	label10->Visible = false;
 	label11->Visible = false;
 	label12->Visible = false;
+	labelID->Visible = true;
 
 	textBox1->Visible = true;
 	textBox2->Visible = true;
@@ -578,6 +579,7 @@ private: System::Void personnel_CheckedChanged(System::Object^ sender, System::E
 	textBox10->Visible = false;
 	textBox11->Visible = false;
 	textBox12->Visible = false;
+	textBoxID->Visible = true;
 
 	dataGridView1->Visible = true;
 
@@ -587,7 +589,6 @@ private: System::Void personnel_CheckedChanged(System::Object^ sender, System::E
 	label4->Text = "Date d'embauche (YYYY-MM-DD) :";
 	label5->Text = "Adresse :";
 }
-
 private: System::Void client_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 
 	creer->Visible = true;
@@ -651,7 +652,7 @@ private: System::Void commande_CheckedChanged(System::Object^ sender, System::Ev
 	label10->Visible = true;
 	label11->Visible = false;
 	label12->Visible = false;
-	labelID->Visible = false;
+	labelID->Visible = true;
 
 	textBox1->Visible = true;
 	textBox2->Visible = true;
@@ -759,7 +760,7 @@ private: System::Void statistique_CheckedChanged(System::Object^ sender, System:
 	textBox10->Visible = true;
 	textBox11->Visible = false;
 	textBox12->Visible = false;
-	textBoxID->Visible = false;
+	textBoxID->Visible = false;	
 
 	dataGridView1->Visible = true;
 
@@ -804,9 +805,9 @@ private: System::Void creer_Click(System::Object^ sender, System::EventArgs^ e) 
 		req.envoyer(ad.creer_date(textBox4->Text));
 		
 		String^ X = req.recuperer(ad.recup_id_adresse(textBox5->Text));
-		String^ Y = req.recuperer(ad.recup_id_date(textBox4->Text));
+		//String^ Y = req.recuperer(ad.recup_id_date(textBox4->Text));
 
-		communication->Text = req.envoyer(pers.creer(X, textBox3->Text, Y, textBox1->Text, textBox2->Text));
+		communication->Text = req.envoyer(pers.creer(X, textBox3->Text, textBox4->Text, textBox1->Text, textBox2->Text));
 	}
 	if (client->Checked)
 	{
