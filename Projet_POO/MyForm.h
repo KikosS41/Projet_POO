@@ -55,31 +55,9 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::RadioButton^ stock;
 	private: System::Windows::Forms::RadioButton^ statistique;
 	private: System::Windows::Forms::Label^ label1;
-
-
-
-
 	private: System::Windows::Forms::TextBox^ textBox1;
-
-
-
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
-
-
 	private: System::Windows::Forms::TextBox^ communication;
-
-
-
-
 	private: System::Windows::Forms::Label^ labelID;
 	private: System::Windows::Forms::TextBox^ textBoxID;
 	private: System::Windows::Forms::GroupBox^ groupBoxID;
@@ -87,49 +65,36 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::GroupBox^ groupBox2;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::TextBox^ textBox2;
-
 	private: System::Windows::Forms::GroupBox^ groupBox3;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::TextBox^ textBox3;
-
 	private: System::Windows::Forms::GroupBox^ groupBox4;
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::TextBox^ textBox4;
-
 	private: System::Windows::Forms::GroupBox^ groupBox5;
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::TextBox^ textBox5;
-
 	private: System::Windows::Forms::GroupBox^ groupBox6;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::TextBox^ textBox6;
-
 	private: System::Windows::Forms::GroupBox^ groupBox7;
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::TextBox^ textBox7;
-
 	private: System::Windows::Forms::GroupBox^ groupBox8;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::TextBox^ textBox8;
-
 	private: System::Windows::Forms::GroupBox^ groupBox9;
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::TextBox^ textBox9;
-
 	private: System::Windows::Forms::GroupBox^ groupBox10;
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::TextBox^ textBox10;
-
 	private: System::Windows::Forms::GroupBox^ groupBox11;
 	private: System::Windows::Forms::Label^ label11;
 	private: System::Windows::Forms::TextBox^ textBox11;
-
 	private: System::Windows::Forms::GroupBox^ groupBox12;
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::TextBox^ textBox12;
-
-
-
 
 	private:
 		/// <summary>
@@ -212,7 +177,7 @@ namespace ProjetPOO {
 			// 
 			// creer
 			// 
-			this->creer->Location = System::Drawing::Point(293, 36);
+			this->creer->Location = System::Drawing::Point(187, 37);
 			this->creer->Margin = System::Windows::Forms::Padding(2);
 			this->creer->Name = L"creer";
 			this->creer->Size = System::Drawing::Size(107, 24);
@@ -224,7 +189,7 @@ namespace ProjetPOO {
 			// 
 			// modifier
 			// 
-			this->modifier->Location = System::Drawing::Point(293, 64);
+			this->modifier->Location = System::Drawing::Point(187, 65);
 			this->modifier->Margin = System::Windows::Forms::Padding(2);
 			this->modifier->Name = L"modifier";
 			this->modifier->Size = System::Drawing::Size(107, 24);
@@ -235,7 +200,7 @@ namespace ProjetPOO {
 			// 
 			// supprimer
 			// 
-			this->supprimer->Location = System::Drawing::Point(293, 93);
+			this->supprimer->Location = System::Drawing::Point(187, 94);
 			this->supprimer->Margin = System::Windows::Forms::Padding(2);
 			this->supprimer->Name = L"supprimer";
 			this->supprimer->Size = System::Drawing::Size(107, 24);
@@ -246,7 +211,7 @@ namespace ProjetPOO {
 			// 
 			// afficher
 			// 
-			this->afficher->Location = System::Drawing::Point(293, 7);
+			this->afficher->Location = System::Drawing::Point(187, 8);
 			this->afficher->Margin = System::Windows::Forms::Padding(2);
 			this->afficher->Name = L"afficher";
 			this->afficher->Size = System::Drawing::Size(107, 24);
@@ -353,12 +318,12 @@ namespace ProjetPOO {
 			// 
 			// communication
 			// 
-			this->communication->Location = System::Drawing::Point(601, 11);
+			this->communication->Location = System::Drawing::Point(472, 11);
 			this->communication->Margin = System::Windows::Forms::Padding(2);
 			this->communication->Multiline = true;
 			this->communication->Name = L"communication";
 			this->communication->ReadOnly = true;
-			this->communication->Size = System::Drawing::Size(210, 106);
+			this->communication->Size = System::Drawing::Size(337, 106);
 			this->communication->TabIndex = 30;
 			// 
 			// labelID
@@ -383,7 +348,7 @@ namespace ProjetPOO {
 			// 
 			this->groupBoxID->Controls->Add(this->labelID);
 			this->groupBoxID->Controls->Add(this->textBoxID);
-			this->groupBoxID->Location = System::Drawing::Point(472, 58);
+			this->groupBoxID->Location = System::Drawing::Point(363, 60);
 			this->groupBoxID->Name = L"groupBoxID";
 			this->groupBoxID->Size = System::Drawing::Size(80, 29);
 			this->groupBoxID->TabIndex = 37;
@@ -809,6 +774,14 @@ private: System::Void personnel_CheckedChanged(System::Object^ sender, System::E
 
 	dataGridView1->Visible = true;
 
+	dataGridView1->ColumnCount = 6;
+	dataGridView1->Columns[0]->Name = "ID";
+	dataGridView1->Columns[1]->Name = "Nom";
+	dataGridView1->Columns[2]->Name = "Prénom";
+	dataGridView1->Columns[3]->Name = "Supérieur";
+	dataGridView1->Columns[4]->Name = "Date d'embauche";
+	dataGridView1->Columns[5]->Name = "Adresse";
+
 	label1->Text = "Nom :";
 	label2->Text = "Prénom :";
 	label3->Text = "Supérieur :";
@@ -839,6 +812,15 @@ private: System::Void client_CheckedChanged(System::Object^ sender, System::Even
 
 	dataGridView1->Visible = true;
 	
+	dataGridView1->ColumnCount = 7;
+	dataGridView1->Columns[0]->Name = "ID";
+	dataGridView1->Columns[1]->Name = "Nom";
+	dataGridView1->Columns[2]->Name = "Prénom";
+	dataGridView1->Columns[3]->Name = "Date de naissance";
+	dataGridView1->Columns[4]->Name = "Date de première commande";
+	dataGridView1->Columns[5]->Name = "Adresse facturation";
+	dataGridView1->Columns[6]->Name = "Adresse livraison";
+
 	label1->Text = "Nom :";
 	label2->Text = "Prénom :";
 	label3->Text = "Date de naissance :";
@@ -903,14 +885,25 @@ private: System::Void stock_CheckedChanged(System::Object^ sender, System::Event
 
 	dataGridView1->Visible = false;
 
-	label1->Text = "Prix HT :";
-	label2->Text = "Référence :";
-	label3->Text = "Désignation :";
+	dataGridView1->ColumnCount = 9;
+	dataGridView1->Columns[0]->Name = "ID";
+	dataGridView1->Columns[1]->Name = "Nom";
+	dataGridView1->Columns[2]->Name = "Nature";
+	dataGridView1->Columns[3]->Name = "Couleur";
+	dataGridView1->Columns[4]->Name = "Quantité";
+	dataGridView1->Columns[5]->Name = "Seuil de réapprovisionnement";
+	dataGridView1->Columns[6]->Name = "Taux TVA";
+	dataGridView1->Columns[7]->Name = "Taille lot";
+	dataGridView1->Columns[8]->Name = "Prix";
+
+	label1->Text = "Nom article :";
+	label2->Text = "Nature :";
+	label3->Text = "Couleur :";
 	label4->Text = "Quantité :";
 	label5->Text = "Seuil de réapprovisionnement :";
 	label6->Text = "Taux TVA :";
-	label7->Text = "Nature :";
-	label8->Text = "Couleur :";
+	label7->Text = "Taille lot :";
+	label8->Text = "Prix :";
 }
 private: System::Void statistique_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 
@@ -935,6 +928,17 @@ private: System::Void statistique_CheckedChanged(System::Object^ sender, System:
 
 	dataGridView1->Visible = true;
 
+	dataGridView1->ColumnCount = 9;
+	dataGridView1->Columns[0]->Name = "Panier moyen";
+	dataGridView1->Columns[1]->Name = "Chiffre d'affaire sur un mois choisi";
+	dataGridView1->Columns[2]->Name = "Produits sous le seuil de reapprovisionnement";
+	dataGridView1->Columns[3]->Name = "montant total des achats pour un client";
+	dataGridView1->Columns[4]->Name = "Les 10 articles les plus vendus";
+	dataGridView1->Columns[5]->Name = "Les 10 articles les moins vendus";
+	dataGridView1->Columns[6]->Name = "Valeur commerciale du stock";
+	dataGridView1->Columns[7]->Name = "Valeur d'achat du stock";
+	dataGridView1->Columns[8]->Name = "Variations de valeurs commerciales";
+
 	label1->Text = "Panier moyen (après remise) :";
 	label2->Text = "Chiffre d'affaire sur un mois choisi :";
 	label3->Text = "Produits sous le seuil de réapprovisionnement :";
@@ -949,12 +953,17 @@ private: System::Void statistique_CheckedChanged(System::Object^ sender, System:
 }
 
 
+	   requete req;
+	   CL_Personnel pers;
+	   CL_adresse_date ad;
+	   CL_Client cli;
+	   CL_stock art;
+	   CL_commande com;
+	   CL_Statistique stats;
+
 private: System::Void afficher_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (statistique->Checked)
 	{
-		requete req;
-		CL_Statistique stats;
-
 		textBox1->Text = req.recuperer(stats.panier_moyen());
 		textBox2->Text = req.recuperer(stats.chiffre_daffaire_sur_un_mois(textBox2->Text));
 		textBox3->Text = req.recuperer(stats.produit_sous_le_seuil_de_reaprovisionnement());
@@ -962,23 +971,21 @@ private: System::Void afficher_Click(System::Object^ sender, System::EventArgs^ 
 		textBox6->Text = req.recuperer(stats.top10_articles_les_plus_vendus());
 		textBox7->Text = req.recuperer(stats.top10_articles_les_moins_vendus());
 	}
+	if (client->Checked) {
+	}
 }
 private: System::Void creer_Click(System::Object^ sender, System::EventArgs^ e) {
-	
-	requete req;
-	CL_Personnel pers;
-	CL_adresse_date ad;
-	CL_Client cli;
+
+
 
 	if (personnel->Checked)
 	{
 		req.envoyer(ad.creer_adresse(textBox5->Text));
 		req.envoyer(ad.creer_date(textBox4->Text));
-		
-		String^ X = req.recuperer(ad.recup_id_adresse(textBox5->Text));
-		String^ Y = req.recuperer(ad.recup_id_date(textBox4->Text));
 
-		communication->Text = req.envoyer(pers.creer(X, textBox3->Text, Y, textBox1->Text, textBox2->Text));
+		String^ X = req.recuperer(ad.recup_id_adresse(textBox5->Text));
+
+		communication->Text = req.envoyer(pers.creer(X, textBox3->Text, textBox4->Text, textBox1->Text, textBox2->Text));
 	}
 	if (client->Checked)
 	{
@@ -992,13 +999,43 @@ private: System::Void creer_Click(System::Object^ sender, System::EventArgs^ e) 
 
 		String^ Yanniv = req.recuperer(ad.recup_id_date(textBox3->Text));
 		String^ Yachat = req.recuperer(ad.recup_id_date(textBox4->Text));
-		
-		
+
+
 		req.envoyer(cli.creer(Xliv, Xfac, Yanniv, Yachat, textBox1->Text, textBox2->Text));
 	}
 	if (stock->Checked)
 	{
-		;
+		req.envoyer(art.creer_tva(textBox6->Text));
+		req.envoyer(art.creer_article(textBox6->Text, textBox1->Text, textBox4->Text, textBox5->Text));
+		req.envoyer(art.creer_couleur(textBox3->Text));
+		communication->Text = req.envoyer(art.creer_nature(textBox1->Text, textBox2->Text));
+		req.envoyer(art.creer_tarif(textBox8->Text, textBox7->Text, textBox1->Text, textBox3->Text, textBox2->Text));
+	}
+}
+private: System::Void supprimer_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (client->Checked) {
+		req.envoyer(cli.supprimer(textBoxID->Text));
+	}
+	if (personnel->Checked) {
+		req.envoyer(pers.supprimer(textBoxID->Text));
+	}
+	if (stock->Checked)
+	{
+		req.envoyer(art.supprimer(textBoxID->Text));
+	}
+
+	if (commande->Checked)
+	{
+		req.envoyer(art.supprimer(textBoxID->Text));
+	}
+
+}
+
+private: System::Void modifier_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	if (stock->Checked)
+	{
+		communication->Text = req.envoyer(art.modifier_article(textBox6->Text, textBox1->Text, textBox4->Text, textBox5->Text, textBoxID->Text));
 	}
 }
 };

@@ -37,3 +37,6 @@ String^ requete::envoyer(String^instruction)
 		return ex->Message;
 	}
 }
+
+
+
