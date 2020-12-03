@@ -11,6 +11,7 @@ String^ requete::recuperer(String^ instruction)
 
 	while (dr->Read()) {
 		resultat += dr[0];
+		resultat += " ; ";
 	}
 	con->Close();
 	dr->Close();

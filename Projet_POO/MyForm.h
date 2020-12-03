@@ -1023,6 +1023,9 @@ private: System::Void afficher_Click(System::Object^ sender, System::EventArgs^ 
 		textBox4->Text = req.recuperer(stats.montant_total_des_achats_pour_un_client(textBox4->Text, textBox5->Text));
 		textBox6->Text = req.recuperer(stats.top10_articles_les_plus_vendus());
 		textBox7->Text = req.recuperer(stats.top10_articles_les_moins_vendus());
+		textBox8->Text = req.recuperer(stats.valeur_achat());
+		textBox9->Text = req.recuperer(stats.valeur_commerciale());
+
 	}
 
 	if (client->Checked) {
