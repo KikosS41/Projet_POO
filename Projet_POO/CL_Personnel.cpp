@@ -5,12 +5,6 @@ String^ CL_Personnel::creer(String^ adr, String^ id_sup, String^ date_emb, Strin
     return "INSERT INTO PERSONNEL(ID_ADRESSE, ID_superieur, ID_DATEEMBAUCHE, NOM, PRENOM) VALUES ((SELECT ID FROM ADRESSE Where ADRESSE.ADRESSE = '"+ adr + "'), '" + id_sup + "', (SELECT ID FROM DATE Where DATE.DATE ='"+ date_emb + "'), '"+nom+"', '"+prenom+"')";
 }
 
-String^ CL_Personnel::afficher()
-{
-    throw gcnew System::NotImplementedException();
-    // TODO: insérer une instruction return ici
-}
-
 String^ CL_Personnel::modifier()
 {
     throw gcnew System::NotImplementedException();

@@ -791,17 +791,8 @@ private: System::Void personnel_CheckedChanged(System::Object^ sender, System::E
 
 	dataGridView1->Visible = true;
 
-	System::Object^ data = dataGridView1->DataSource;
-	BindingSource^ bd = bindingSource1;
-	Object^ dbd = bindingSource1->DataSource;
-	String^ constr = "server=127.0.0.1;user id=root;persistsecurityinfo=True;database=projet_poo;port=3308";
-	MySqlConnection^ con = gcnew MySqlConnection(constr);
-	MySqlDataAdapter^ cmd = gcnew MySqlDataAdapter("SELECT personnel.nom as nom, personnel.prenom as prenom, adresse.adresse as adresse, date.date as dateembauche from((personnel inner join adresse on personnel.id_adresse = adresse.id) inner join date on personnel.ID_dateembauche = date.ID)", con);
-	DataTable^ dt = gcnew DataTable();
-	cmd->Fill(dt);
-	bindingSource1->DataSource = dt;
-	dataGridView1->DataSource = bindingSource1;
-	
+	communication->Text = req.recuperer_table(pers.recuperer_tout(), dataGridView1, bindingSource1);
+
 	label1->Text = "Nom :";
 	label2->Text = "Prénom :";
 	label3->Text = "Supérieur :";
@@ -831,6 +822,8 @@ private: System::Void client_CheckedChanged(System::Object^ sender, System::Even
 
 	dataGridView1->Visible = true;
 	
+	communication->Text = req.recuperer_table(cli.recuperer_tout(), dataGridView1, bindingSource1);
+
 	label1->Text = "Nom :";
 	label2->Text = "Prénom :";
 	label3->Text = "Date de naissance :";

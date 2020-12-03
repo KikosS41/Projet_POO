@@ -14,5 +14,6 @@ public:
 	String^ recuperer_date_de_1er_commande(String^);
 	String^ recuperer_adr_fac(String^);
 	String^ recuperer_adr_liv(String^);
+	String^ recuperer_tout();
 };
 

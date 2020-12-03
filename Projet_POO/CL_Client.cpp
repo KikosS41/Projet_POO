@@ -56,3 +56,9 @@ String^ CL_Client::recuperer_adr_liv(String^)
     throw gcnew System::NotImplementedException();
     // TODO: insérer une instruction return ici
 }
+
+String^ CL_Client::recuperer_tout()
+{
+    throw gcnew System::NotImplementedException();
+    // TODO: insérer une instruction return ici
+}

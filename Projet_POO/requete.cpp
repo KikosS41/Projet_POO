@@ -1,13 +1,5 @@
 #include "requete.h"
 
-using namespace System;
-using namespace System::ComponentModel;
-using namespace System::Collections;
-using namespace System::Windows::Forms;
-using namespace System::Data;
-using namespace System::Drawing;
-using namespace MySql::Data::MySqlClient;
-
 String^ requete::recuperer(String^ instruction)
 {
 	try {
@@ -30,8 +22,9 @@ String^ requete::recuperer(String^ instruction)
 	}
 }
 
-String^ requete::recuperer_table(String^ req)
+String^ requete::recuperer_table(String^ req,DataGridView^ dataGridView1, BindingSource^ bindingSource1)
 {
+	try {
 	System::Object^ data = dataGridView1->DataSource;
 	BindingSource^ bd = bindingSource1;
 	Object^ dbd = bindingSource1->DataSource;
@@ -41,6 +34,12 @@ String^ requete::recuperer_table(String^ req)
 	cmd->Fill(dt);
 	bindingSource1->DataSource = dt;
 	dataGridView1->DataSource = bindingSource1;
+	return "Table importé";
+
+	}
+	catch (Exception^ ex) {
+		return ex->Message;
+	}
 }
 
 String^ requete::envoyer(String^instruction)
